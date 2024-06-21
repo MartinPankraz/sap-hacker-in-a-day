@@ -1,0 +1,208 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "playbookName": {
+            "type": "string",
+            "metadata": {
+                "description": "Name of the playbook"
+            }
+        },
+        "subscriptionId": {            
+            "type": "String"
+        },
+        "resourceGroup": {
+            "defaultValue": "DSAGWS-RG",
+            "type": "String"
+        },
+        "location": {
+            "defaultValue": "westeurope",
+            "type": "String"
+        },
+        "teamsGroupId": {
+            "type": "String",
+            "metadata": {
+                "description": "The ID of the Teams group"
+            }
+        },
+        "teamsChannelId": {
+            "type": "String",
+            "metadata": {
+                "description": "The ID of the Teams channel"
+            }
+        }   
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Logic/workflows",
+            "apiVersion": "2017-07-01",
+            "name": "[parameters('playbookName')]",
+            "location": "[parameters('location')]",
+            "identity": {
+                "type": "SystemAssigned"
+            },
+            "properties": {
+                "state": "Enabled",
+                "definition": {
+                    "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+                    "contentVersion": "1.0.0.0",
+                    "parameters": {
+                        "$connections": {
+                            "defaultValue": {},
+                            "type": "Object"
+                        }
+                    },
+                    "triggers": {
+                        "Microsoft_Sentinel_incident": {
+                            "type": "ApiConnectionWebhook",
+                            "inputs": {
+                                "host": {
+                                    "connection": {
+                                        "name": "@parameters('$connections')['azuresentinel']['connectionId']"
+                                    }
+                                },
+                                "body": {
+                                    "callback_url": "@{listCallbackUrl()}"
+                                },
+                                "path": "/incident-creation"
+                            },
+                            "conditions": []
+                        }
+                    },
+                    "actions": {
+                        "For_each_alert": {
+                            "foreach": "@triggerBody()?['object']?['properties']?['Alerts']",
+                            "actions": {
+                                "Parse_GeoLocation_data": {
+                                    "type": "ParseJson",
+                                    "inputs": {
+                                        "content": "@json(items('For_each_alert')?['properties']?['additionalData']?['Custom Details'])['GeoLocation'][0]",
+                                        "schema": {
+                                            "type": "object",
+                                            "properties": {
+                                                "country": {
+                                                    "type": "string"
+                                                },
+                                                "latitude": {
+                                                    "type": "number"
+                                                },
+                                                "longitude": {
+                                                    "type": "number"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "Append_to_alert_message": {
+                                    "runAfter": {
+                                        "Set_user_from_alert_details": [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type": "AppendToStringVariable",
+                                    "inputs": {
+                                        "name": "AlertMessage",
+                                        "value": "- Alert: @{items('For_each_alert')?['properties']?['alertDisplayName']}\\r\n- User: @{variables('User')}\n- Location: @{body('Parse_GeoLocation_data')?['country']}\\r\n- Severity: @{items('For_each_alert')?['properties']?['severity']}"
+                                    }
+                                },
+                                "Set_user_from_alert_details": {
+                                    "runAfter": {
+                                        "Parse_GeoLocation_data": [
+                                            "Succeeded"
+                                        ]
+                                    },
+                                    "type": "SetVariable",
+                                    "inputs": {
+                                        "name": "User",
+                                        "value": "@json(items('For_each_alert')?['properties']?['additionalData']?['Custom Details'])?['SAP_User'][0]"
+                                    }
+                                }
+                            },
+                            "runAfter": {
+                                "Initialize_user": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "Foreach"
+                        },
+                        "Post_card_in_Teams_Security_Incident_channel": {
+                            "runAfter": {
+                                "For_each_alert": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "ApiConnection",
+                            "inputs": {
+                                "host": {
+                                    "connection": {
+                                        "name": "@parameters('$connections')['teams']['connectionId']"
+                                    }
+                                },
+                                "method": "post",
+                                "body": {
+                                    "recipient": {
+                                        "groupId": "[parameters('teamsGroupId')]",
+                                        "channelId": "[parameters('teamsChannelId')]"
+                                    },
+                                    "messageBody": "{\n    \"type\": \"AdaptiveCard\",\n    \"$schema\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n    \"version\": \"1.5\",\n    \"body\": [\n        {\n            \"type\": \"TextBlock\",\n            \"text\": \"An [incident with ID @{triggerBody()?['object']?['properties']?['incidentNumber']}](@{triggerBody()?['object']?['properties']?['incidentUrl']}) for SAP user @{variables('User')} has been created due to the following alert(s):\",\n            \"wrap\": true\n        },\n       {\n            \"type\": \"TextBlock\",\n            \"text\": \"@{variables('AlertMessage')}\",\n            \"wrap\": true\n        }\n    ]\n}"
+                                },
+                                "path": "/v1.0/teams/conversation/adaptivecard/poster/@{encodeURIComponent('User')}/location/@{encodeURIComponent('Channel')}"
+                            }
+                        },
+                        "Initialize_Teams_alert_message": {
+                            "runAfter": {},
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "AlertMessage",
+                                        "type": "string"
+                                    }
+                                ]
+                            }
+                        },
+                        "Initialize_user": {
+                            "runAfter": {
+                                "Initialize_Teams_alert_message": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "User",
+                                        "type": "string"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "outputs": {}
+                },
+                "parameters": {
+                    "$connections": {
+                        "value": {
+                            "azuresentinel": {
+                                "id": "[concat('/subscriptions/', parameters('subscriptionId'), '/providers/Microsoft.Web/locations/', parameters('location'), '/managedApis/azuresentinel')]",
+                                "connectionId": "[concat('/subscriptions/', parameters('subscriptionId'), '/resourceGroups/', parameters('resourceGroup'), '/providers/Microsoft.Web/connections/azuresentinel')]",
+                                "connectionName": "azuresentinel",
+                                "connectionProperties": {
+                                    "authentication": {
+                                        "type": "ManagedServiceIdentity"
+                                    }
+                                }
+                            },
+                            "teams": {
+                                "id": "[concat('/subscriptions/', parameters('subscriptionId'), '/providers/Microsoft.Web/locations/', parameters('location'), '/managedApis/teams')]",
+                                "connectionId": "[concat('/subscriptions/', parameters('subscriptionId'), '/resourceGroups/', parameters('resourceGroup'), '/providers/Microsoft.Web/connections/teams')]",
+                                "connectionName": "teams"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

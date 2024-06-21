@@ -1,0 +1,78 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "connections_teams_name": {
+            "defaultValue": "teams",
+            "type": "String"
+        },
+        "subscriptionId": {            
+            "type": "String"
+        },
+        "tenantId": {            
+            "type": "String"
+        },
+        "resourceGroup": {
+            "defaultValue": "DSAGWS-RG",
+            "type": "String"
+        },
+        "location": {
+            "defaultValue": "westeurope",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Web/connections",
+            "apiVersion": "2016-06-01",
+            "name": "[parameters('connections_teams_name')]",
+            "location": "[parameters('location')]",
+            "kind": "V1",
+            "properties": {
+                "displayName": "sapsentinel@bestruncorp.onmicrosoft.com",
+                "authenticatedUser": {
+                    "name": "sapsentinel@bestruncorp.onmicrosoft.com"
+                },
+                "statuses": [
+                    {
+                        "status": "Connected"
+                    }
+                ],
+                "customParameterValues": {},
+                "nonSecretParameterValues": {
+                    "token:tenantId": "[parameters('tenantId')]"
+                },
+                "createdTime": "2024-08-21T12:11:49.7483678Z",
+                "changedTime": "2024-08-27T05:47:53.4527106Z",
+                "api": {
+                    "name": "teams",
+                    "displayName": "Microsoft Teams",
+                    "description": "Microsoft Teams enables you to get all your content, tools and conversations in the Team workspace with Microsoft 365.",
+                    "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1705/1.0.1705.3833/teams/icon.png",
+                    "brandColor": "#4B53BC",
+                    "id": "[concat('/subscriptions/', parameters('subscriptionId'), '/providers/Microsoft.Web/locations/', parameters('location'),'/managedApis/teams')]",
+                    "type": "Microsoft.Web/locations/managedApis"
+                },
+                "testLinks": [
+                    {
+                        "requestUri": "[concat('https://management.azure.com:443/subscriptions/', parameters('subscriptionId'), '/resourceGroups/', parameters('resourceGroup'), '/providers/Microsoft.Web/connections/', parameters('connections_teams_name'), '/extensions/proxy/beta/me/teamwork?api-version=2016-06-01')]",
+                        "method": "get"
+                    }
+                ],
+                "testRequests": [
+                    {
+                        "body": {
+                            "request": {
+                                "method": "get",
+                                "path": "beta/me/teamwork"
+                            }
+                        },
+                        "requestUri": "[concat('https://management.azure.com:443/subscriptions/', parameters('subscriptionId'), '/resourceGroups/', parameters('resourceGroup'), '/providers/Microsoft.Web/connections/', parameters('connections_teams_name'), '/dynamicInvoke?api-version=2018-07-01-preview')]",
+                        "method": "POST"
+                    }
+                ]
+            }
+        }
+    ]
+}
