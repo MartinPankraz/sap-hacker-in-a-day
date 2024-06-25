@@ -8,7 +8,10 @@ Welcome to your **red teaming hands-on lab** experience! This repos gets you all
 Defenders often think in check lists to protect their SAP systems. Attackers think in graphs to exploit them. 
 ```
 
-This workshop gives you a glimpse into the world of a [red team-er](https://en.wikipedia.org/wiki/Red_team). You will learn how to exploit a vulnerable SAP system login and how to detect and respond to evolving attacks. Understand the difference between SAP compliance and threat protection.
+This workshop gives you a glimpse into the world of a [red team'er](https://en.wikipedia.org/wiki/Red_team). You will learn how to exploit a vulnerable SAP system login and how to detect & respond to ever evolving attacks.
+
+> [!IMPORTANT]
+> This work is merely a demonstration of what adept attackers can do. It is the defender's responsibility to take such attacks into consideration and find ways to protect their users against this type of attacks. The linked resources should be used only in legitimate penetration testing assignments or educational purposes. The authors are not responsible for any misuse of the tools mentioned.
 
 > [!TIP]
 >🏆Finish the final quest, collect the pass phrase, and redeem it to claim [your badge](https://webhostingforconverter.z16.web.core.windows.net/claim-reward.html) 😎
