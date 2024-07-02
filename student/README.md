@@ -18,7 +18,7 @@ We'll have some notes for you as you go:
 ## Lab prerequisites
 
 > [!IMPORTANT]
-> **A machine with local admin rights** is mandatory to download, install and run the required software.
+> **A machine (virtual or physical) with local admin rights** is mandatory to download, install and run the required software.
 
 - **Azure Subscription**: If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/).
 - **Setup a phishing simulation tool** of your choice. Following screenshots and video references refer to Evilginx3.
@@ -57,15 +57,17 @@ Our journey will start from the very beginning and will take you through the fol
 
 ⏳Take a natural break here if suitable.
 
-## [Quest 3](quest3.md) -
+## [Quest 3](quest3.md) - Analyze the catch with Sentinel for SAP
 
 🌟🌟🌟
 🕒 25 min
 
+## [Quest 4](quest4.md) - Destroy evidence of your evil deeds
+
 Approach the last quest with a bang
 
 > [!TIP]
->🏆Finish [questX](quest4.md), share your application link to claim [your badge](https://webhostingforconverter.z16.web.core.windows.net/claim-reward.html) 😎 May the ninja-cat be with you.
+>🏆Finish [quest 4](quest4.md), share your session cookie as proof of completion to claim [your badge](https://webhostingforconverter.z16.web.core.windows.net/claim-reward.html) 😎 May the ninja-cat be with you.
 
 ## Where to next?
 
