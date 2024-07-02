@@ -1,5 +1,16 @@
 # Quest 2 - Lure some phish
 
+## Weaponize an email to cast out your bait
+
+- Use the devious lure created before to craft a convincing email. Often, their content create a sense of urgency or curiosity to make the target click on the link and use fancy html to look professional. Maybe your SAP user is expiring soon and you need to renew access? 🤔there is a wealth of options there. Get creative or have a look online for inspiration.
+
+> [!NOTE]
+> The email should be convincing enough to make the target click on the link despite being flagged as [EXTERNAL] and all the other warning signs Outlook365 puts up. Sophisticated hacks try to capture internal accounts to send out baits from a trusted source. We are skipping this step for simplicity.
+
+- Share your phishing result with the team for mutual learning.
+
+- Finally, pull in your phish by either clicking the link from your received email or paste the URL into your browser.
+
 ## Enjoy your phish
 
 1. Find the credentials and cookies in the Evilginx3 console. Use below command to list the sessions:
