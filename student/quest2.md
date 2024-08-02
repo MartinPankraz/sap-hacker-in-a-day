@@ -31,6 +31,6 @@ sessions 4
 
 ## Where to next?
 
-**[🏠Home](../README.md)** - [ Quest 2 >](quest2.md)
+**[🏠Home](../README.md)** - [ Quest 3 >](quest3.md)
 
 [🔝](#)
