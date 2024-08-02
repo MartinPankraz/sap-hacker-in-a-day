@@ -61,10 +61,14 @@ config ipv4 127.0.0.1
 config domain dsag-red-team.com
 ```
 
+![Configure evilginx3](assets/quest1/config-evilginx3.png)
+
 > [!NOTE]
 > hackers use elusive domains like 'microsofttonline.com' to trick users. Outlook and M365 pick up such attempts, but other email clients may not. Note we use a domain that is not registered and only used for this tutorial.
 
-- Find the root certificate in the `User` folder (%USERPROFILE%\.evilginx\crt) and install it on your machine.
+- Find the root certificate in the `User` folder (%USERPROFILE%\\.evilginx\crt) and install it on your machine.
+![find root certificate](assets/quest1/install-certificate.png)
+
 - Add this certificate to the Trusted Root Certificate Authorities store of the Current User. Otherwise, you will get a certificate error when accessing the phishing page.
 
 You may need to restart your machine for the changes to take effect.
@@ -84,6 +88,7 @@ build_run.bat
 ```
 
 - Verify the M365 phishlet is now showing up.
+![new phishlet](assets/quest1/new-phishlet.png)
 
 > [!TIP]
 > Always check for updates on the phishlets and the tool itself. Things are changing rapidly in the security world.
@@ -94,14 +99,17 @@ build_run.bat
 phishlets hostname microsoft365 dsag-red-team.com
 phishlets enable microsoft365 
 ```
+![prepare phishing lure](assets/quest1/prepare-phsishing-lure.png)
 
 #### Enhance hosts file for local testing
 
 ```bash
 phishlets get-hosts microsoft365
 ```
+![get-hosts](assets/quest1/phshlet-gethost.png)
 
 - Add the output to your hosts file located at `C:\Windows\System32\drivers\etc\hosts`. You will need admin rights to edit this file.
+![hosts](assets/quest1/hosts.png)
 
 #### Create your phishing lure
 
@@ -109,9 +117,11 @@ phishlets get-hosts microsoft365
 lures create microsoft365
 lures get-url 0
 ```
+![creat fishing lure](assets/quest1/create-phishing-lure.png)
 
 - Open the URL in your browser to see the phishing page.
 - Check the Evilginx3 console for the captured output so far ("new visitor has arrived" etc.).
+![new visitor](assets/quest1/new-visitor.png)
 
 ## Where to next?
 
