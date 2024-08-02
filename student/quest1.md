@@ -28,6 +28,9 @@ Our guidance here refers to a windows environment on an Azure VM. You can adjust
 git clone https://github.com/kgretzky/evilginx2.git
 ```
 
+> [!TIP]
+> If you have not installed a Git client, you can also go directly to the [Evilginx3 repo](https://github.com/kgretzky/evilginx2), click on *Code* and *Download ZIP*. Once the ZIP file is downloaded extract it to your virtual machine. 
+
 > [!IMPORTANT]
 > Many of you will run into Defender detections with the executable upon [download](https://github.com/kgretzky/evilginx2/releases). Consider building the tool from source in such cases.
 
