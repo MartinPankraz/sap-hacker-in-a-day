@@ -24,6 +24,8 @@ Our guidance here refers to a windows environment on an Azure VM. You can adjust
 
 ### Step 1: Install Evilginx3
 
+Install [git](https://git-scm.com/downloads) if you haven't already.
+
 ```bash
 git clone https://github.com/kgretzky/evilginx2.git
 ```
