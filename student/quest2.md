@@ -1,5 +1,9 @@
 # Quest 2 - Lure some phish
 
+[ Quest 1 <](quest1.md) - **[🏠Home](../README.md)** - [ Quest 2 >](quest2.md)
+
+This quest is about sneaking in the phishing lure and increasing the chance to make someone use it.
+
 ## Weaponize an email
 
 Use the devious lure created before to craft a convincing email. Often, their content create a sense of urgency or curiosity to make the target click on the link and use fancy html to look professional. Maybe your SAP user is expiring soon and you need to renew access? 🤔there is a wealth of options there.
@@ -7,11 +11,11 @@ Use the devious lure created before to craft a convincing email. Often, their co
 Use the AI assistant of your choice to help create that email.
 
 > [!NOTE]
-> The email should be convincing enough to make the target click on the link despite being flagged as [EXTERNAL] and all the other warning signs Outlook365 puts up. Sophisticated hacks try to capture internal accounts to send out baits from a trusted source. We are skipping this step for simplicity.
+> The email should be convincing enough to make the target click on the link despite being flagged as [EXTERNAL] and all the other warning signs Outlook365 puts up. Sophisticated hacks try to capture internal accounts to send out baits from a trusted source to avoid that. Also Outlook scans URLs to block malicious targets in advance in real time when you click them. We are skipping this step for simplicity.
 
-### Convincing ChatGPT, Claude, and others to spill guts
+### Convincing ChatGPT, Claude, and others to spill their guts
 
-All the AI assistants are at your disposal are racing to put up guard rails to prevent being misused by hackers. This is a very volatile space. Expect to tune jailbreak techniques often. Learn more about the currently disclosed techniques through the following resources to attempt to use them for your phishing campaign:
+All the AI assistants are at your disposal are racing to put up guard rails to prevent being misused by hackers. This is a very volatile space. Expect needing to tune jailbreak techniques often. Learn more about the currently disclosed techniques through the following resources to attempt to use them for your phishing campaign:
 
 - [Crescendo attack](https://crescendo-the-multiturn-jailbreak.github.io//)
 - [Skeleton Key attack](https://www.microsoft.com/security/blog/2024/06/26/mitigating-skeleton-key-a-new-type-of-generative-ai-jailbreak-technique/)
