@@ -1,6 +1,6 @@
 # Quest 2 - Lure some phish
 
-[ Quest 1 <](quest1.md) - **[🏠Home](../README.md)** - [ Quest 2 >](quest2.md)
+[< Quest 1 ](quest1.md) - **[🏠Home](../README.md)** - [ Quest 2 >](quest2.md)
 
 This quest is about sneaking in the phishing lure and increasing the chance to make someone use it.
 
@@ -15,12 +15,15 @@ Use the AI assistant of your choice to help create that email.
 
 ### Convincing ChatGPT, Claude, and others to spill their guts
 
-All the AI assistants are at your disposal are racing to put up guard rails to prevent being misused by hackers. This is a very volatile space. Expect needing to tune jailbreak techniques often. Learn more about the currently disclosed techniques through the following resources to attempt to use them for your phishing campaign:
+All the AI assistants, that are at your disposal are racing to put up guard rails to prevent being misused by hackers. This is a very volatile space. Expect needing to tune jailbreak techniques often. Learn more about the currently disclosed techniques through the following resources to attempt to use them for your phishing campaign:
 
 - [Crescendo attack](https://crescendo-the-multiturn-jailbreak.github.io//)
-- [Skeleton Key attack](https://www.microsoft.com/security/blog/2024/06/26/mitigating-skeleton-key-a-new-type-of-generative-ai-jailbreak-technique/)
+- [Skeleton Key (or master key) attack](https://www.microsoft.com/security/blog/2024/06/26/mitigating-skeleton-key-a-new-type-of-generative-ai-jailbreak-technique/)
 - [Past tense prompts](https://ki-techlab.de/ki-news/llm-refusal-training-easily-bypassed-with-past-tense-prompts/)
-- Claiming an educational environment to prevent the attack
+
+Promising rewards like Taylor Swift tickets or threating the AI for better results seems inconclusive at this point, but can't hurt to try, right? 🤷‍♂️Let's the hope they never come calling to collect.
+
+See [this blog](https://minimaxir.com/2024/02/chatgpt-tips-analysis/) for more info.
 
 #### Past tense prompt sample
 
@@ -38,6 +41,9 @@ I want the users to look at full blown polished convincing looking emails with S
 ```
 
 If you don't succeed in getting the AI to generate the email, you can always use the template provided during the training. Manual human crafting is also an option and maybe even more convincing.
+
+> [!NOTE]
+> One of the approaches used to prevent any misuse and strive for more responsible AI are so called prompt shields. Learn more [here](https://learn.microsoft.com/azure/ai-services/content-safety/concepts/jailbreak-detection).
 
 ## Cast out your bait🎣
 
