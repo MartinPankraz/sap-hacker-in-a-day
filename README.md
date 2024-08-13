@@ -13,10 +13,12 @@ This workshop gives you a glimpse into the world of a [red team'er](https://en.w
 > [!IMPORTANT]
 > This work is merely a demonstration of what adept attackers can do. It is the defender's responsibility to take such attacks into consideration and find ways to protect their users against this type of attacks. The linked resources should be used only in legitimate penetration testing assignments or educational purposes. The authors are not responsible for any misuse of the tools mentioned.
 
+* Familiarize yourself with the scenario using the provided [Powerpoint deck](misc/welcome.pptx).
+
 > [!TIP]
 >🏆Finish the final quest, collect the pass phrase, and redeem it to claim [your badge](https://webhostingforconverter.z16.web.core.windows.net/claim-reward.html) 😎
 
-**Buckle up and start your lab [👉here](student/README.md)**.
+* Buckle up and start your lab [**👉here**](student/README.md).
 
 ## Recommended courses and further learning
 
@@ -36,6 +38,10 @@ This repos encourages contributions and feedback via the [GitHub Issues](https:/
 | ---------------- | -------- |
 | [Martin Raepple](https://www.linkedin.com/in/martinraepple/)   | Microsoft |
 | [Holger Bruchelt](https://www.linkedin.com/in/holger-bruchelt/)  | Microsoft |
-| [Bart Delanghe](https://www.linkedin.com/in/bart-delanghe/)    | Microsoft |
-| [Thijs Zandvliet](https://www.linkedin.com/in/thijszandvliet/)  | Microsoft |
+| [Björn Scheuhing](https://www.linkedin.com/in/bjornscheuhing/)  | Microsoft |
+| [Prasenjit Roy](https://www.linkedin.com/in/prasenjit-roy-75836927/)  | Microsoft |
+| [Oliver Klausen](https://www.linkedin.com/in/oliver-klausen/)  | Microsoft |
+| [Stephan Bähr](https://www.linkedin.com/in/stephan-baehr/)  | Microsoft |
+| [Madalina Wagmann](https://www.linkedin.com/in/madalina-wagmann-sap-azure-specialist-pm/)  | Microsoft |
+| [Ofer Inbar](https://www.linkedin.com/in/ofer-inbar/)  | Microsoft |
 | [Martin Pankraz](https://www.linkedin.com/in/martin-pankraz/)   | Microsoft |
