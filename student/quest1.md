@@ -18,9 +18,9 @@ git clone https://github.com/MartinPankraz/sap-hacker-in-a-day.git
 
 A common practice for "playing" with hacking tools is to utilize an *isolated environment*. This can be a virtual machine or a container. This way, you can *keep your main machine clean* and avoid any unintended consequences. Below are a couple of suggestions.
 
-We recommend using a containerized environment for a code based approach that results in easy reproducibility.
+We *recommend using a containerized environment* for a code based approach that results in easy reproducibility.
 
-See instructions for Docker and cross-platform PowerShell [here](../docker-kali/README.md).
+* Follow instructions for Docker and cross-platform PowerShell [here](../docker-kali/README.md).
 
 > [!NOTE]
 > Alternatives are:
@@ -32,6 +32,8 @@ See instructions for Docker and cross-platform PowerShell [here](../docker-kali/
 >    * Any other available to you.
 
 ### Step 1: Build image from Dockerfile and Run container
+
+Run below commands in sequence to build the image and run the container.
 
 ```bash
 cd ..\docker-kali\
@@ -46,6 +48,8 @@ Once Evilginx shows up on your console as its own process, continue your setup..
 ### Step 2: Configure Evilginx3
 
 See the official documentation for reference [here](https://help.evilginx.com/docs/intro).
+
+Run below commands using the CLI of Evilginx3 to configure the tool.
 
 ```bash
 config ipv4 127.0.0.1
@@ -89,6 +93,8 @@ We will use a sample phishlet for M365 shared by [Jan Bakker](https://github.com
 
 ### Step 4: Prepare your phishing lure
 
+Run below commands using the CLI of Evilginx3 to prepare the phishing lure.
+
 ```bash
 phishlets hostname microsoft365 dsag-red-team.com
 phishlets enable microsoft365 
@@ -99,6 +105,8 @@ phishlets enable microsoft365
 </p>
 
 #### Enhance your hosts file for local testing
+
+Run below commands using the CLI of Evilginx3 to get the required hosts file entries conveniently.
 
 ```bash
 phishlets get-hosts microsoft365
