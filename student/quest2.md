@@ -64,10 +64,15 @@ sessions 4
 ```
 
 2. Copy the session cookie
-3. Open a private browser window (note that some policies interfere with the login!) or better change browser to avoid conflicts with the current session. Alternatively, consider wiping the cookies from the current browser session (browsers developer tools: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd> -> Application -> Clear Site Data).
+3. Open a private browser window (note that some policies interfere with the login!) or better change browser to avoid conflicts with the current session.
+
+> [!TIP]
+> Alternatively, consider wiping the cookies from the current browser session.
+> Use the browser's developer tools: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd>.
+> Navigate to the Application tab -> Clear Site Data.
 
 > [!IMPORTANT]
-> Use any [browser extension](https://microsoftedge.microsoft.com/addons/detail/cookieeditor/neaplmfkghagebokkhpjpoebhdledlfi) to apply the cookie and impersonate the user.
+> Use any [browser extension for cookie handling](https://microsoftedge.microsoft.com/addons/detail/cookieeditor/neaplmfkghagebokkhpjpoebhdledlfi) to apply the stolen cookie and impersonate the user.
 
 4. Click Import and paste the cookie you copied from the Evilginx3 console into your browser extension.
 
@@ -75,7 +80,7 @@ sessions 4
 <img alt="Cookie editor" src="assets/quest2/cookie-editor.png"  width="600">
 </p>
 
-5. Navigate to https://your-sap-domain:port/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=001&sap-language=EN#Shell-home and refresh the page.
+5. Navigate to your SAP Fiori Launchpad (e.g. https://your-sap-domain:port/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=001&sap-language=EN#Shell-home) and refresh the page.
 
 6. See the magic happen on the EvilGinx console and enjoy your phish! 🎉
 
