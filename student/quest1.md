@@ -45,6 +45,14 @@ This will create the `my-evilginx-container` with fixed names for static referen
 
 Once Evilginx shows up on your console as its own process, continue your setup...
 
+> [!TIP]
+> The scripts are meant for initial execution. When revisiting the container after a break or similar, run the following from within the container to reach operational status again:
+>
+> ```bash
+> docker start my-evilginx-container
+> docker exec -it my-evilginx-container /bin/bash
+> ```
+
 ### Step 2: Configure Evilginx3
 
 See the official documentation for reference [here](https://help.evilginx.com/docs/intro).

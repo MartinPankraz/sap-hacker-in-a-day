@@ -17,7 +17,7 @@ https://your-sap-domain:port/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpa
 You will be redirected to the Entra-ID Login page. Once you are authenticated, you can access the SAP Fiori Launchpad with all the roles and permissions that are assigned to your user.
 
 <p align="center" width="100%">
-<img alt="Cookie editor" src="assets/quest0/overview.png"  width="600">
+<img alt="Cookie editor" src="assets/quest0/overview.png"  width="800">
 </p>
 
 > [!NOTE]
