@@ -43,11 +43,12 @@ Our journey will start from the very beginning and will take you through the fol
 ## Meet your Mentors, learn more about the journey and kick-off
 
 🌟
-🕒 10 mins
+🕒 15 mins
 
-## [Quest 0](quest0.md) - Introduction - See our hacking target
+## [Quest 0](quest0.md) - See our hacking target
+
 🌟
-🕒 30 mins
+🕒 15 mins
 
 ## [Quest 1](quest1.md) - Setup your lab environment
 
@@ -57,16 +58,19 @@ Our journey will start from the very beginning and will take you through the fol
 ## [Quest 2](quest2.md) - Lure some phish
 
 🌟🌟🌟
-🕒 15 mins
+🕒 30 mins
 
 ⏳Take a natural break here if suitable.
 
 ## [Quest 3](quest3.md) - Analyze the catch with Sentinel for SAP
 
 🌟🌟🌟
-🕒 25 min
+🕒 30 min
 
 ## [Quest 4](quest4.md) - Destroy evidence of your evil deeds
+
+🌟🌟🌟
+🕒 15 min
 
 Approach the last quest with a bang
 
