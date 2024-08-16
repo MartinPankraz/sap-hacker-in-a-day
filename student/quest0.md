@@ -12,7 +12,8 @@ Before we install anything and get started, lets take a look at our target syste
 
 You will be redirected to the Entra-ID Login page. Once you are authenticated, you can access the SAP Fiori Launchpad with all the roles and permissions that are assigned to your user.  
 
-> [!NOTE] In our scenario MFA is not configured, because all participants would have needed to run through the setup process with their mobile phone. Usually you would need to run through the MFA process using Entra-ID via your mobile device. 
+> [!NOTE] 
+> In our scenario MFA is not configured, because all participants would have needed to run through the setup process with their mobile phone. Usually you would need to run through the MFA process using Entra-ID via your mobile device. 
 
 
 ## The evil proxy

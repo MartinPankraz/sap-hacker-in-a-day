@@ -1,6 +1,6 @@
 # Pre-Hacking checks
 
-**[🏠Home](../README.md)** - [ Quest 1 >](quest1.md)
+**[🏠Home](../README.md)** - [ Quest 0 >](quest0.md)
 
 > [!TIP]
 > Keep a bookmark to this repository to support you in your journey.
@@ -43,6 +43,10 @@ Our journey will start from the very beginning and will take you through the fol
 ## Meet your Mentors, learn more about the journey and kick-off
 
 🌟
+🕒 10 mins
+
+## [Quest 0](quest0.md) - Introduction - See our hacking target
+🌟
 🕒 30 mins
 
 ## [Quest 1](quest1.md) - Setup your lab environment
@@ -71,6 +75,6 @@ Approach the last quest with a bang
 
 ## Where to next?
 
-**[🏠Home](../README.md)** - [ Quest 1 >](quest1.md)
+**[🏠Home](../README.md)** - [ Quest 0 >](quest0.md)
 
 [🔝](#)
