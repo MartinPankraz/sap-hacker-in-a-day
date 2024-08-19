@@ -18,7 +18,9 @@ This workshop gives you a glimpse into the world of a [red team'er](https://en.w
 > [!TIP]
 >🏆Finish the final quest, collect the pass phrase, and redeem it to claim [your badge](https://webhostingforconverter.z16.web.core.windows.net/claim-reward.html) 😎
 
-* Buckle up and start your lab [**👉here**](student/README.md).
+## 📌Buckle up and start your lab [**👉here**](student/README.md)📌
+
+⏱️⩇⩇:⩇⩇⩇⩇:⩇⩇
 
 ## Recommended courses and further learning
 

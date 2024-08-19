@@ -1,6 +1,6 @@
 # Quest 2 - Lure some phish
 
-[< Quest 1 ](quest1.md) - **[🏠Home](../README.md)** - [ Quest 2 >](quest2.md)
+[< Quest 1 ](quest1.md) - **[🏠Home](../README.md)** - [ Quest 3 >](quest3.md)
 
 This quest is about sneaking in the phishing lure and increasing the chance to make someone use it.
 
@@ -86,6 +86,6 @@ sessions 4
 
 ## Where to next?
 
-**[🏠Home](../README.md)** - [ Quest 3 >](quest3.md)
+[< Quest 1 ](quest1.md) - **[🏠Home](../README.md)** - [ Quest 3 >](quest3.md)
 
 [🔝](#)
