@@ -85,7 +85,11 @@ config domain dsag-red-team.com
 .\get-crt.ps1
 ```
 
-* Add this certificate to the Trusted Root Certificate Authorities store of the Current User (double click the file -> Install Certificate). Otherwise, you will get a certificate error when accessing the phishing page!
+* Add this certificate to the **Trusted Root Certificate Authorities** store of the Current User (double click the file -> Install Certificate). Otherwise, you will get a certificate error when accessing the phishing page!
+
+<p align="center" width="100%">
+<img alt="Configure trust store" src="assets/quest1/trust-store.png"  width="600">
+</p>
 
 In some cases, you may need to restart your machine for the certificate changes to take effect.
 
