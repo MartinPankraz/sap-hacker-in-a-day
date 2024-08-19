@@ -52,6 +52,12 @@ Once Evilginx shows up on your console as its own process, continue your setup..
 > docker start my-evilginx-container
 > docker exec -it my-evilginx-container /bin/bash
 > ```
+>
+> From within the bash run
+>
+> ```bash
+> evilginx2
+> ```
 
 ### Step 2: Configure Evilginx3
 
