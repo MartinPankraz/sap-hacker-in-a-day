@@ -60,7 +60,7 @@ If you don't succeed in getting the AI to generate the email, you can always use
 1. Find the credentials and cookies in the Evilginx3 console. Use below command to list the sessions:
 
 ```bash
-sessions 4
+sessions
 ```
 
 2. Copy the session cookie
