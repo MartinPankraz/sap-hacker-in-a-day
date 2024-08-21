@@ -60,11 +60,17 @@ If you don't succeed in getting the AI to generate the email, you can always use
 1. Find the credentials and cookies in the Evilginx3 console. Use below command to list the sessions:
 
 ```bash
-sessions 4
+sessions
 ```
 
-2. Copy the session cookie
-3. Open a private browser window (note that some policies interfere with the login!) or better change browser to avoid conflicts with the current session.
+2. Show the details for the listed session id (for example '1') of the "microsoft365" phishlet with the command
+
+```bash
+sessions 1
+```
+   
+3. Copy the session cookie
+4. Open a private browser window (note that some policies interfere with the login!) or better change browser to avoid conflicts with the current session.
 
 > [!TIP]
 > Alternatively, consider wiping the cookies from the current browser session.
