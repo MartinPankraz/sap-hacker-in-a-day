@@ -48,50 +48,55 @@ To query the SAP Audit Log for logins of your user (e.g. user1@bestruncorp.onmic
 <img alt="Step 7" src="assets/quest3/3-7.png"  width="600">
 </p>
 
-### Step 8: Lorem ipsum
-Lorem ipsum
+Inspect the latest entry in the query result which shows the attacker's login with the stolen cookie of your user. Notice the *User* and *Computer* data fields. Since the IP address of the attacker is **NOT** in the range of your corporate network you will use this data to automate the threat detection with Sentinel.
+
+Go back to the Sentinel main navigation menu by clicking the link in the breadcrumb navigation.
 <p align="center" width="100%">
 <img alt="Step 8" src="assets/quest3/3-8.png"  width="600">
 </p>
 
-### Step 9: Lorem ipsum
-Lorem ipsum
+### Automate threat detection for the scenario with an Analytic Rule
+Sentinel uses built-in and custom analytics rules to detect threats. These rules are based on known attack patterns and behaviors, and they continuously analyze data from various sources to identify suspicious activities.
+
+Let's start this journey by inspecting the current entries for the expected network ranges of *legitimate* login requests to your SAP system.
+
+Select **Watchlist** from the navigation menu and enter "Networks" in the search bar. Click on "SAP - Networks" from the search results.
+
+Click the **Update watchlist** button and select **Edit watchlist items**.
 <p align="center" width="100%">
 <img alt="Step 9" src="assets/quest3/3-9.png"  width="600">
 </p>
 
-### Step 10: Lorem ipsum
-Lorem ipsum
+The **SAP - Networks** watchlist currently contains one entry which represents the network range of IP addresses of *authorized clients* from the corporate network. Leave the entry as-is and go back to the main menu by clicking the **Microsoft Sentinel** entry in the breadcrumb navigation.
 <p align="center" width="100%">
 <img alt="Step 10" src="assets/quest3/3-10.png"  width="600">
 </p>
 
-### Step 11: Lorem ipsum
-Lorem ipsum
+Select **Analytics** from the menu and switch to the **Rule templates** tab.
+
+Search for a built-in rule template to detect logins from unexpected networks by entering "Login from" in the search bar. On the "SAP - Login from unexpected network" built-in rule, select **Create rule**. 
 <p align="center" width="100%">
 <img alt="Step 11" src="assets/quest3/3-11.png"  width="600">
 </p>
 
-### Step 12: Lorem ipsum
-Lorem ipsum
+Change the name of your new analytic rule by adding your user name to it, e.g. "SAP - **User1** login from unexpected network". Optionally, change the description accordingly.
+
+Click **Next: Set rule logic**.
 <p align="center" width="100%">
 <img alt="Step 12" src="assets/quest3/3-12.png"  width="600">
 </p>
 
-### Step 13: Lorem ipsum
-Lorem ipsum
+Select the default Kusto query from the built-in rule and copy it to the clipboard. 
 <p align="center" width="100%">
 <img alt="Step 13" src="assets/quest3/3-13.png"  width="600">
 </p>
 
-### Step 14: Lorem ipsum
-Lorem ipsum
+To avoid interference with the other users we only want to detect threats for your specific user. Therefore, the query must be changed accordingly. You can seek help from [Microsoft Copilot](https://copilot.microsoft.com/) by entering the a prompt like *"How do I change the following Kusto query to filter only audit log message for a specific user?"*, followed by the built-in query you copied before to the clipboard.  
 <p align="center" width="100%">
 <img alt="Step 14" src="assets/quest3/3-14.png"  width="600">
 </p>
 
-### Step 15: Lorem ipsum
-Lorem ipsum
+Copilot will add the required expressions to the built-in query. Check the proposed query and if it fit
 <p align="center" width="100%">
 <img alt="Step 15" src="assets/quest3/3-15.png"  width="600">
 </p>
