@@ -18,9 +18,9 @@ git clone https://github.com/MartinPankraz/sap-hacker-in-a-day.git
 
 A common practice for "playing" with hacking tools is to utilize an *isolated environment* instead of your "bare" machine. This can be a container or a virtual machine. This way, you can *keep your main machine clean* and avoid any unintended consequences. Below are a couple of suggestions.
 
-We *recommend using a containerized environment* for a code based approach that results in easy reproducibility.
+We **recommend using a containerized environment** for a code based approach that results in easy reproducibility. Choose from below options. Narrative here leads with Step 1a.
 
-* [Step 1a](#step-1a-build-image-from-dockerfile-and-run-container-on-your-local-machine) - Use container runtime like Docker/Podman on your local machine.
+* [Step 1a](#step-1a-build-image-from-dockerfile-and-run-container-on-your-local-machine) - Use container runtime like Docker/Podman on your local machine or
 * [Step 1b](quest1b.md) - Use a virtual machine with a hypervisor like VirtualBox or Hyper-V on your local machine or cloud-based virtual machine like Azure VMs.
 
 ### Step 1a: Build image from Dockerfile and Run container on your local machine
