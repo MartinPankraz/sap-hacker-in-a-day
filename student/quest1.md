@@ -55,6 +55,11 @@ Once Evilginx shows up on your console as its own process, continue your setup..
 > ```bash
 > docker start -ia my-evilginx-container
 > ```
+> or
+> ```bash
+> podman start -ia my-evilginx-container
+> ```
+>
 > This command takes you directly to the Evilginx command line interface.
 
 ### Step 2: Configure Evilginx3
