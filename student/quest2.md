@@ -93,6 +93,8 @@ sessions 1
 
 7. Refresh the page and see the magic happen on the EvilGinx console and enjoy your phish! 🎉
 
+## Update the [leaderboard](https://forms.office.com/r/aYH8rh7vp5) with your progress⏱
+
 ## Where to next?
 
 [< Quest 1 ](quest1.md) - **[🏠Home](../README.md)** - [ Quest 3 >](quest3.md)

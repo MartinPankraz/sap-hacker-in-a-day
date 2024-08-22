@@ -8,6 +8,8 @@ Standard out-of-the-box detections are great, but sometimes you need to create a
 
 * Take inspiration from [this blog post](https://community.sap.com/t5/technology-blogs-by-members/nice-patch-sap-revisiting-your-sap-btp-security-measures-after-ai-core/ba-p/13770662).
 
+## Update the [leaderboard](https://forms.office.com/r/aYH8rh7vp5) with your progress⏱
+
 ## Where to next?
 
 [< Quest 3 ](quest3.md) - **[🏠Home](../README.md)** - [ Quest 5 >](quest5.md)

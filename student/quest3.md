@@ -143,6 +143,8 @@ Lorem ipsum
 <img alt="Step 22" src="assets/quest3/3-22.png"  width="600">
 </p>
 
+## Update the [leaderboard](https://forms.office.com/r/aYH8rh7vp5) with your progress⏱
+
 ## Where to next?
 
 [< Quest 2 ](quest2.md) - **[🏠Home](../README.md)** - [ Quest 4 >](quest4.md)

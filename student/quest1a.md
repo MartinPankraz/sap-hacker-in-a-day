@@ -14,24 +14,18 @@ If not, [install](https://git-scm.com/downloads) as per your environment and clo
 git clone https://github.com/MartinPankraz/sap-hacker-in-a-day.git
 ```
 
-### Step 0: Consider using a container or virtual sandbox to keep your machine "clean"
+### Step 0: Spin up your hosting environment
 
-A common practice for "playing" with hacking tools is to utilize an *isolated environment*. This can be a virtual machine or a container. This way, you can *keep your main machine clean* and avoid any unintended consequences. Below are a couple of suggestions.
+A common practice for "playing" with hacking tools is to utilize an *isolated environment* instead of your "bare" machine. This can be a container or a virtual machine. This way, you can *keep your main machine clean* and avoid any unintended consequences. Below are a couple of suggestions.
 
 We *recommend using a containerized environment* for a code based approach that results in easy reproducibility.
 
-* Follow instructions for Docker and cross-platform PowerShell [here](../docker-kali/README.md).
+* [Step 1a](#step-1a-build-image-from-dockerfile-and-run-container-on-your-local-machine) - Use container runtime like Docker/Podman on your local machine.
+* [Step 1b](quest1b.md) - Use a virtual machine with a hypervisor like VirtualBox or Hyper-V on your local machine or cloud-based virtual machine like Azure VMs.
 
-> [!NOTE]
-> Alternatives are:
-> * Local virtual machines (embedded in your physical device)
->    * [Hyper-V on Windows 10](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v) or
->    * [VirtualBox](https://www.virtualbox.org/) or similar.
-> * Remote virtual machines (Hyperscaler options)
->    * Spin up environments with [Azure VMs](https://azure.microsoft.com/free/) with free credits or
->    * Any other available to you.
+### Step 1a: Build image from Dockerfile and Run container on your local machine
 
-### Step 1: Build image from Dockerfile and Run container
+* Follow install instructions for Docker/Podman and cross-platform PowerShell [here](../docker-kali/README.md).
 
 Run below commands in sequence to build the image and run the container.
 
@@ -164,6 +158,8 @@ lures get-url 0
 <p align="center" width="100%">
 <img alt="new visitor" src="assets/quest1/new-visitor.png"  width="600">
 </p>
+
+## Update the [leaderboard](https://forms.office.com/r/aYH8rh7vp5) with your progress⏱
 
 ## Where to next?
 

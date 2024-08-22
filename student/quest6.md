@@ -10,6 +10,8 @@
 > [!TIP]
 > Don't forget to claim your badge for completing this lab!
 
+## Update the [leaderboard](https://forms.office.com/r/aYH8rh7vp5) with your progress⏱
+
 ## Where to next?
 
 [< Quest 5 ](quest5.md) - **[🏠Home](../README.md)**
