@@ -53,15 +53,9 @@ Once Evilginx shows up on your console as its own process, continue your setup..
 > The scripts are meant for initial execution. When revisiting the container after a break or similar, run the following from within the container to reach operational status again:
 >
 > ```bash
-> docker start my-evilginx-container
-> docker exec -it my-evilginx-container /bin/bash
+> docker start -ia my-evilginx-container
 > ```
->
-> From within the bash run
->
-> ```bash
-> evilginx2
-> ```
+> This command takes you directly to the Evilginx command line interface.
 
 ### Step 2: Configure Evilginx3
 
