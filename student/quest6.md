@@ -4,7 +4,7 @@
 
 * Clean up any configuration and files (e.g. hosts file) you created during this tutorial.
 * Destroy the virtual environment or delete the resources in Azure. At least stop them to avoid using further free credits.
-* Stop Docker containers if you used them `docker stop my-evilginx-container`.
+* Stop Docker/Podman containers if you used them `docker stop my-evilginx-container` or `podman stop my-evilginx-container`.
 * Consider removing the phishing simulation tool from your machine.
 
 > [!TIP]
