@@ -91,57 +91,72 @@ Select the default Kusto query from the built-in rule and copy it to the clipboa
 <img alt="Step 13" src="assets/quest3/3-13.png"  width="600">
 </p>
 
-To avoid interference with the other users we only want to detect threats for your specific user. Therefore, the query must be changed accordingly. You can seek help from [Microsoft Copilot](https://copilot.microsoft.com/) by entering the a prompt like *"How do I change the following Kusto query to filter only audit log message for a specific user?"*, followed by the built-in query you copied before to the clipboard.  
+To avoid interference with the other users we only want to detect threats for your specific user. Therefore, the query must be changed accordingly. 
+
+You can seek help from [Microsoft Copilot](https://copilot.microsoft.com/) by entering the a prompt like *"How do I change the following Kusto query to filter only audit log message for a specific user?"*, followed by the built-in query you copied before to the clipboard.  
 <p align="center" width="100%">
 <img alt="Step 14" src="assets/quest3/3-14.png"  width="600">
 </p>
 
-Copilot will add the required expressions to the built-in query. Check the proposed query and if it fit
+Copilot will add the required expressions to the built-in query. Check the proposed query to see if it fits and copy it into the clipboard.
 <p align="center" width="100%">
 <img alt="Step 15" src="assets/quest3/3-15.png"  width="600">
 </p>
 
-### Step 16: Lorem ipsum
-Lorem ipsum
+Replace the rule logic with the Copilot proposal from the clipboard. 
+
+Change the placeholder in the variable definition (here "your_specific_user")
+
+```bash
+let specificUser = "your_specific_user"
+```
+
+with the SAP user name, e.g. *"USER1"*.
+
+Change the **Query scheduling** settings to run the query every 5 minutes on SAP Audit Log data not older than 30 minutes. This time range should cover the audit log data captured from the successful attack at the end of [Quest 2](quest2.md).
+
+Click **Next: Incident settings**.
 <p align="center" width="100%">
 <img alt="Step 16" src="assets/quest3/3-16.png"  width="600">
 </p>
 
-### Step 17: Lorem ipsum
-Lorem ipsum
+Leave the settings unchanged and click **Next: Automated response**.
 <p align="center" width="100%">
 <img alt="Step 17" src="assets/quest3/3-17.png"  width="600">
 </p>
 
-### Step 18: Lorem ipsum
-Lorem ipsum
+Create a new automation rule for sending the notification to the SOC via Microsoft Teams by clicking **Add new**.
 <p align="center" width="100%">
 <img alt="Step 18" src="assets/quest3/3-18.png"  width="600">
 </p>
 
-### Step 19: Lorem ipsum
-Lorem ipsum
+Enter a name for your rule that identifies the user, e.g. *"User1 - Send notification to Teams"*. 
+
+Select **Run playbook** from **Actions**.
+
+Select the playbook for your user (e.g. *PlaybookUnexpectedNetworkLogin**User1***) from the list of playbooks. You will take a closer look at the playbook in [Quest 5](quest5.md) and enhance it with additional logic.
+
+Click **Apply**.
 <p align="center" width="100%">
 <img alt="Step 19" src="assets/quest3/3-19.png"  width="600">
 </p>
 
-### Step 20: Lorem ipsum
-Lorem ipsum
+Click **Next: Review + create**.
 <p align="center" width="100%">
 <img alt="Step 20" src="assets/quest3/3-20.png"  width="600">
 </p>
 
-### Step 21: Lorem ipsum
-Lorem ipsum
+After the validation has passed, click **Save**.
 <p align="center" width="100%">
 <img alt="Step 21" src="assets/quest3/3-21.png"  width="600">
 </p>
 
-### Step 22: Lorem ipsum
-Lorem ipsum
+You've created a new analytics rule for the attack scenario.
 <p align="center" width="100%">
 <img alt="Step 22" src="assets/quest3/3-22.png"  width="600">
 </p>
+
+Let's see the new rule in action!
 
 ## Where to next?
 
