@@ -156,6 +156,8 @@ You've created a new analytics rule for the attack scenario.
 <img alt="Step 22" src="assets/quest3/3-22.png"  width="600">
 </p>
 
+## Update the [leaderboard](https://forms.office.com/r/aYH8rh7vp5) with your progress⏱
+
 Let's see the new rule in action!
 
 ## Where to next?
