@@ -27,12 +27,22 @@ We **recommend using a containerized environment** for a code based approach tha
 
 * Follow install instructions for Docker/Podman and cross-platform PowerShell [here](../docker-kali/README.md).
 
-Run below commands in sequence to build the image and run the container.
+* Run below commands in sequence to build the image and run the container.
+
+#### For Docker (with provided PowerShell scripts)
 
 ```bash
 cd ..\docker-kali\
 .\build-image.ps1
 .\run-container.ps1
+```
+
+#### For Podman (with plain bash commands)
+
+```bash
+cd ../docker-kali/
+podman build -t my-evilginx-kali:latest .
+podman run -it -p 443:443 --name my-evilginx-container my-evilginx-kali:latest
 ```
 
 This will create the `my-evilginx-container` with fixed names for static referencing for downstream commands.
@@ -45,6 +55,11 @@ Once Evilginx shows up on your console as its own process, continue your setup..
 > ```bash
 > docker start -ia my-evilginx-container
 > ```
+> or
+> ```bash
+> podman start -ia my-evilginx-container
+> ```
+>
 > This command takes you directly to the Evilginx command line interface.
 
 ### Step 2: Configure Evilginx3
