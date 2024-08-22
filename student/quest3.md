@@ -111,7 +111,7 @@ Change the placeholder in the variable definition (here "your_specific_user")
 let specificUser = "your_specific_user"
 ```
 
-with the SAP user name, e.g. *"USER1"*.
+with your SAP user name, e.g. *"USER1"*.
 
 Change the **Query scheduling** settings to run the query every 5 minutes on SAP Audit Log data not older than 30 minutes. This time range should cover the audit log data captured from the successful attack at the end of [Quest 2](quest2.md).
 
@@ -156,9 +156,82 @@ You've created a new analytics rule for the attack scenario.
 <img alt="Step 22" src="assets/quest3/3-22.png"  width="600">
 </p>
 
-## Update the [leaderboard](https://forms.office.com/r/aYH8rh7vp5) with your progress⏱
-
 Let's see the new rule in action!
+
+### Investigate the Playbook run history
+
+First we check if the Playbook referenced in the new rule has been triggered by the creation of a new incident for the login from an unexpected network.
+
+In the Azure Portal search bar, enter "Logic" and select **Logic apps** from the search results.
+
+<p align="center" width="100%">
+<img alt="Step 23" src="assets/quest3/3-23.png"  width="600">
+</p>
+
+Click on the Playbook's Logic app of your rule and user, e.g. _PlaybookUnexpectedNetworkLogin**User1**_
+
+<p align="center" width="100%">
+<img alt="Step 24" src="assets/quest3/3-24.png"  width="600">
+</p>
+
+Check the start time and status of the latest entry in the *Run history* to verify that the Logic app has been triggered successfully. It may take up to 5 minutes based on your rule schedule until the the Logic app runs for the first time.
+
+> [!TIP]
+> Hit **Refresh** to update the run history for new entries.
+
+<p align="center" width="100%">
+<img alt="Step 25" src="assets/quest3/3-25.png"  width="600">
+</p>
+
+Click on the trigger action with the name **Microsoft Sentinel Incident** to see more details of the rule execution.
+
+<p align="center" width="100%">
+<img alt="Step 26" src="assets/quest3/3-26.png"  width="600">
+</p>
+
+In the *body* section, scroll down to find the incident's ID that triggered the rule.
+
+<p align="center" width="100%">
+<img alt="Step 27" src="assets/quest3/3-27.png"  width="600">
+</p>
+
+### Check the notification in Teams
+
+Finally, login to [Microsoft Teams](https://teams.microsoft.com) with the SOC user **sapsentinel@bestruncorp.onmicrosoft.com**. Login with the same password as for your user.
+
+<p align="center" width="100%">
+<img alt="Step 28" src="assets/quest3/3-28.png"  width="600">
+</p>
+
+Enter "ID <ID of your incident, e.g. 56>" in the search bar.
+
+<p align="center" width="100%">
+<img alt="Step 29" src="assets/quest3/3-29.png"  width="600">
+</p>
+
+Click on the message in the search results.
+
+<p align="center" width="100%">
+<img alt="Step 30" src="assets/quest3/3-30.png"  width="600">
+</p>
+
+The playbook posted an [Adaptive Card](https://learn.microsoft.com/en-us/adaptive-cards/) to teams with a deep link to the generated incident in the Azure Portal.
+
+Click on the **incident link**.
+
+<p align="center" width="100%">
+<img alt="Step 31" src="assets/quest3/3-31.png"  width="600">
+</p>
+
+The link takes you directly to the incident details in Sentinel.
+
+<p align="center" width="100%">
+<img alt="Step 32" src="assets/quest3/3-32.png"  width="600">
+</p>
+
+Congratulations for completing quest 3!
+
+## Update the [leaderboard](https://forms.office.com/r/aYH8rh7vp5) with your progress⏱
 
 ## Where to next?
 
