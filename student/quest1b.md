@@ -1,6 +1,6 @@
 # Step 1b: Alternative setup
 
-[ < Quest 1 ](ques1.md) **[🏠Home](../README.md)**
+[ < Quest 1 ](quest1.md) - **[🏠Home](../README.md)**
 
 In case corporate policies or any other reason prevent your from installing the required tools on your local machine, you can use:
 
@@ -55,6 +55,6 @@ In case you are lucky you can follow the normal install steps:
 
 ## Where to next?
 
-[ < Quest 1 ](ques1.md) **[🏠Home](../README.md)**
+[ < Quest 1 ](quest1.md) - **[🏠Home](../README.md)**
 
 [🔝](#)
