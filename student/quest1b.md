@@ -1,5 +1,7 @@
 # Step 1b: Alternative setup
 
+[ < Quest 1 ](ques1.md) **[🏠Home](../README.md)**
+
 In case corporate policies or any other reason prevent your from installing the required tools on your local machine, you can use:
 
 * Local virtual machines (embedded in your physical device)
@@ -49,10 +51,10 @@ In case you are lucky you can follow the normal install steps:
 
 - Allow Access on subsequent Defender firewall prompt like a vigilante in the making.
 
-## Step 2: go back to the lead [Quest](quest1a.md#step-2-configure-evilginx3) and continue with Step 2 normally
+## Step 2: go back to the lead [Quest](quest1.md#step-2-configure-evilginx3) and continue with Step 2 normally
 
 ## Where to next?
 
-**[🏠Home](../README.md)** - [ Quest 2 >](quest2.md)
+[ < Quest 1 ](ques1.md) **[🏠Home](../README.md)**
 
 [🔝](#)
