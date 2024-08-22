@@ -27,7 +27,7 @@ We **recommend using a containerized environment** for a code based approach tha
 
 * Follow install instructions for Docker/Podman and cross-platform PowerShell [here](../docker-kali/README.md).
 
-Run below commands in sequence to build the image and run the container.
+* Run below commands in sequence to build the image and run the container.
 
 #### For Docker (with provided PowerShell scripts)
 
