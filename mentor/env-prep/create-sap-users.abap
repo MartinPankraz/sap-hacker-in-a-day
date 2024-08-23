@@ -1,8 +1,6 @@
 *&---------------------------------------------------------------------*
 *& Report ZBD_UPLOADUSERS
 *&---------------------------------------------------------------------*
-*& @author: bdelangh
-*&---------------------------------------------------------------------*
 REPORT ZBD_UPLOADUSERS.
 
 type-pools: truxs.
@@ -30,12 +28,12 @@ PARAMETERS: p_file TYPE string DEFAULT 'C:\localsource\uploadusers\users.csv',
 
 
 * At selection screen
-AT SELECTION-SCREEN ON VALUE-REQUEST FOR p_file.
-  CALL FUNCTION 'F4_FILENAME'
-    EXPORTING
-      field_name = 'P_FILE'
-    IMPORTING
-      file_name  = p_file.
+* AT SELECTION-SCREEN ON VALUE-REQUEST FOR p_file.
+*  CALL FUNCTION 'F4_FILENAME'
+*    EXPORTING
+*      field_name = 'P_FILE'
+*    IMPORTING
+*      file_name  = p_file.
 
 
 START-OF-SELECTION.
