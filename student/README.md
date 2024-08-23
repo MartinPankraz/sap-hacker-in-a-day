@@ -32,6 +32,8 @@
 > [!TIP]
 > Optionally, configure your [Entra ID instance to enforce MFA](https://learn.microsoft.com/entra/identity/authentication/tutorial-enable-azure-mfa). This will help you to see how the phishing simulation tool can be used to bypass MFA.
 
+Guided workshop participants can go to the [next section](#️epic-quests).
+
 ## 🧙🏾‍♀️Epic Quests
 
 Our journey will start from the very beginning and will take you through the following quests:
