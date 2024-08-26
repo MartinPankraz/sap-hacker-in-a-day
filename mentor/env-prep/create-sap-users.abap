@@ -127,3 +127,4 @@ LOOP AT lt_csv_data INTO DATA(lv_csv_line).
     TABLES
       profiles = lt_profiles
       return   = lt_return.
+ENDLOOP.
