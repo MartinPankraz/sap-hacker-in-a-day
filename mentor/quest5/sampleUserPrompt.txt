@@ -1,0 +1,1 @@
+Compose mitigation recommendations in plain text format with less than 100 words for the following alert: @{items('For_each_alert')?['properties']?['description']}

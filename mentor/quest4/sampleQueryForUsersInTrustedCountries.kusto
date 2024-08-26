@@ -1,0 +1,43 @@
+let SelectedSystemRoles = dynamic(["Production"]); //can also do// let SelectedSystemRoles =  dynamic(["Production", "UAT"]); dynamic(["All System Roles"])
+let SelectedSystems = SAPSystems(SelectedSystemRoles= SelectedSystemRoles);
+let AuditClasses = dynamic(['AU1', 'AU5']); // Audit Log Classes - Dialog Logon Successful, RFC Logon Successful
+// Dialog / CPIC / RFC Int / RFC Ext / SRFC / User Switch / HTTP / Restore Session / API Call
+let DialogLogonTypes = dynamic(['A', 'C', 'F', 'R', 'S', 'U', 'H', 'u', ' ']);
+// let Networks = _GetWatchlist('SAP - Networks');
+// here you can exclude system users which are OK to execute this action
+// by adding those users in the SAP_User_Config watchlist with a tag of "LoginUnExpectedOK"
+let excludeUsersTags= dynamic(["LoginUnExpectedOK"]);// dynamic(["LoginUnExpectedOK","SAP_ALL"]);
+let excludedUsers= SAPUsersGetVIP(SearchForTags= excludeUsersTags)
+    | summarize by User2Exclude=SAPUser;
+let specificUser = "USER1"; // Replace with the actual user you want to filter
+// flag unexpected logins from countries other than United States and Australia
+let trustedCountries = dynamic(['United States', 'Australia']);
+SAPAuditLog
+// Add audit classes
+| join kind= inner SelectedSystems on SystemID
+| where MessageID in (AuditClasses)
+| where Variable1 in (DialogLogonTypes) // Is a dialog logon type from the list
+| where isnotempty(TerminalIPv6) // There is a Ipv6 address
+// if you wish to allow all private addresses
+| where not (ipv4_is_private(TerminalIPv6))
+// | evaluate ipv4_lookup(Networks, TerminalIPv6, Network, return_unmatched = true)
+| extend country = geo_info_from_ip_address(TerminalIPv6)['country']
+| where country !in (trustedCountries)
+// Similar to regular lookup, by ipv4 address, unmatched is like left join
+// | where isempty(Network) // Network is not familiar
+| join kind=leftantisemi excludedUsers on $left.User == $right.User2Exclude
+// filter for specific user logins
+| where User == specificUser // Filter for the specific user
+// Details
+| project
+    TimeGenerated,
+    SystemID,
+    ClientID,
+    User,
+    TransactionCode,
+    MessageText,
+    Email,
+    TerminalIPv6,
+    Host
+| extend GeoLocation = iff(ipv4_is_private(TerminalIPv6), dynamic({"IsPrivate": true}), geo_info_from_ip_address(TerminalIPv6))
+| extend AlertRuleUniqueName = 'loginfromunexpectednetwork'

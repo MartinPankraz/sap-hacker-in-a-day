@@ -1,6 +1,6 @@
 # Quest 2 - Lure some phish
 
-[< Quest 1 ](quest1.md) - **[🏠Home](../README.md)** - [ Quest 2 >](quest2.md)
+[< Quest 1 ](quest1.md) - **[🏠Home](../README.md)** - [ Quest 3 >](quest3.md)
 
 This quest is about sneaking in the phishing lure and increasing the chance to make someone use it.
 
@@ -15,9 +15,12 @@ Often, their content create a sense of urgency or curiosity to make the target c
 > [!NOTE]
 > The email should be convincing enough to make the target click on the link despite being flagged as [EXTERNAL] and all the other warning signs Outlook365 puts up. Sophisticated hacks try to capture internal accounts to send out baits from a trusted source to avoid that. Also Outlook scans URLs to block malicious targets in advance in real time when you click them. We are skipping this step for simplicity.
 
-### Convincing ChatGPT, Claude, and others to spill their guts
+### Convincing Bing Chat, ChatGPT, Claude, and others to spill their guts
 
 All the AI assistants, that are at your disposal are racing to put up guard rails to prevent being misused by hackers. This is a very volatile space. Expect needing to tune jailbreak techniques often. Learn more about the currently disclosed techniques through the following resources to attempt using them for your phishing campaign:
+
+> [!TIP]
+> [Bing Copilot](https://www.bing.com/chat) is available to you without additional registration. Be aware of usage limitations when not logged in!
 
 * [Crescendo attack](https://crescendo-the-multiturn-jailbreak.github.io//)
 * [Skeleton Key (or master key) attack](https://www.microsoft.com/security/blog/2024/06/26/mitigating-skeleton-key-a-new-type-of-generative-ai-jailbreak-technique/)
@@ -60,32 +63,40 @@ If you don't succeed in getting the AI to generate the email, you can always use
 1. Find the credentials and cookies in the Evilginx3 console. Use below command to list the sessions:
 
 ```bash
-sessions 4
+sessions
 ```
 
-2. Copy the session cookie
-3. Open a private browser window (note that some policies interfere with the login!) or better change browser to avoid conflicts with the current session.
+2. Show the details for the listed session id (for example '1') of the "microsoft365" phishlet with the command
+
+```bash
+sessions 1
+```
+   
+3. Copy the session cookie
+4. Open a private browser window (note that some policies interfere with the login!) or change browser to avoid conflicts with the current session.
 
 > [!TIP]
-> Alternatively, consider wiping the cookies from the current browser session.
+> Consider wiping the cookies from the current browser session to be absolutely sure you are not logged in with your own account.
 > Use the browser's developer tools: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd>.
 > Navigate to the Application tab -> Clear Site Data.
 
 > [!IMPORTANT]
 > Use any [browser extension for cookie handling](https://microsoftedge.microsoft.com/addons/detail/cookieeditor/neaplmfkghagebokkhpjpoebhdledlfi) to apply the stolen cookie and impersonate the user.
 
-4. Click Import and paste the cookie you copied from the Evilginx3 console into your browser extension.
+5. Navigate to the SAP Fiori Launchpad: `https://your-sap-domain:port/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=001&sap-language=EN#Shell-home` and wait for the redirect to `login.microsoftonline.com`.
+
+6. Open your cookie extension, delete all existing cookies, click Import, paste the cookie you copied from the Evilginx3 console into your browser extension, and finish by clicking Import again.
 
 <p align="center" width="100%">
 <img alt="Cookie editor" src="assets/quest2/cookie-editor.png"  width="600">
 </p>
 
-5. Navigate to your SAP Fiori Launchpad (e.g. https://your-sap-domain:port/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=001&sap-language=EN#Shell-home) and refresh the page.
+7. Refresh the page and see the magic happen on the EvilGinx console and enjoy your phish! 🎉
 
-6. See the magic happen on the EvilGinx console and enjoy your phish! 🎉
+## Update the [leaderboard](https://forms.office.com/r/aYH8rh7vp5) with your progress⏱
 
 ## Where to next?
 
-**[🏠Home](../README.md)** - [ Quest 3 >](quest3.md)
+[< Quest 1 ](quest1.md) - **[🏠Home](../README.md)** - [ Quest 3 >](quest3.md)
 
 [🔝](#)
