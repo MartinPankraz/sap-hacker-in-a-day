@@ -66,14 +66,24 @@ If you don't succeed in getting the AI to generate the email, you can always use
 sessions
 ```
 
+<p align="center" width="100%">
+<img alt="Cookie editor" src="assets/quest2/sessions.png"  width="600">
+</p>
+
 2. Show the details for the listed session id (for example '1') of the "microsoft365" phishlet with the command
 
 ```bash
 sessions 1
 ```
-   
+
+  
 3. Copy the session cookie
-4. Open a private browser window (note that some policies interfere with the login!) or change browser to avoid conflicts with the current session.
+ 
+<p align="center" width="100%">
+<img alt="Cookie editor" src="assets/quest2/copy-cookie.png"  width="600">
+</p>
+
+1. Open a private browser window (note that some policies interfere with the login!) or change browser to avoid conflicts with the current session.
 
 > [!TIP]
 > Consider wiping the cookies from the current browser session to be absolutely sure you are not logged in with your own account.
