@@ -95,13 +95,24 @@ sessions 1
 
 5. Navigate to the SAP Fiori Launchpad: `https://your-sap-domain:port/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=001&sap-language=EN#Shell-home` and wait for the redirect to `login.microsoftonline.com`.
 
-6. Open your cookie extension, delete all existing cookies, click Import, paste the cookie you copied from the Evilginx3 console into your browser extension, and finish by clicking Import again.
+6. Open your cookie extension, delete all existing cookies, click Import, 
+<p align="center" width="100%">
+<img alt="Cookie editor" src="assets/quest2/cookie-editor0.png"  width="600">
+</p>
+
+ 
+ 
+paste the cookie you copied from the Evilginx3 console into your browser extension, and finish by clicking Import again.
 
 <p align="center" width="100%">
 <img alt="Cookie editor" src="assets/quest2/cookie-editor.png"  width="600">
 </p>
 
-7. Refresh the page and see the magic happen on the EvilGinx console and enjoy your phish! 🎉
+7. Refresh the page and see the magic happen on the EvilGinx console and enjoy your phish! 🎉 You just were able to log on with stolen cookie information to an SAP system without knowing the username and password!
+<p align="center" width="100%">
+<img alt="Cookie editor" src="assets/quest2/done.png"  width="600">
+</p>
+
 
 ## Update the [leaderboard](https://forms.office.com/r/aYH8rh7vp5) with your progress⏱
 
