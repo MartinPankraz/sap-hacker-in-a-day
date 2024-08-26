@@ -18,6 +18,12 @@ This workshop gives you a glimpse into the world of a [red team'er](https://en.w
 > [!TIP]
 >🏆Finish the final quest, collect the pass phrase, and redeem it to claim [your badge](https://webhostingforconverter.z16.web.core.windows.net/claim-reward.html) 😎
 
+## What to expect
+
+When you are lucky enough to have signed-up to a guided experience with us like with [this DSAG event](https://dsagnet.de/event/sap-hacker-fur-einen-halben-tag), we will be providing the SAP system and Microsoft + Azure environment for you.
+
+If not, you will find the preliminary steps to setup the lab for participants [here](./student/README.md#when-not-in-a-guided-workshop-ensure-you-have).
+
 ## 📌Buckle up and start your lab [**👉here**](student/README.md)📌
 
 ⏱️⩇⩇:⩇⩇⩇⩇:⩇⩇
