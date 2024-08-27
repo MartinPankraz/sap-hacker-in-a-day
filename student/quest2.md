@@ -82,7 +82,10 @@ sessions 1
 <img alt="Cookie editor" src="assets/quest2/copy-cookie.png"  width="600">
 </p>
 
-4. Open a private browser window (note that some policies interfere with the login!) or change browser to avoid conflicts with the current session. Be aware that browser extensions often need to be activated in the private window first too.
+4. Open a private browser window (note that some policies interfere with the login!) or change browser to avoid conflicts with the current session.
+
+> [!CAUTION]
+> Be aware that browser extensions often need to be activated in the private window first too. On Edge you can do this by navigating to `edge://extensions/` -> Cookie editor -> Details -> Allow in InPrivate.
 
 > [!TIP]
 > Consider wiping the cookies from the current browser session to be absolutely sure you are not logged in with your own account.
@@ -106,9 +109,12 @@ and paste the cookie you copied from the Evilginx3 console (see image from step 
 <img alt="Cookie editor" src="assets/quest2/cookie-editor.png"  width="600">
 </p>
 
-7. Refresh the page and see the magic happen on the EvilGinx console and enjoy your phish!🎉
+7. Refresh the page and see the magic happen.
 
-You just were able to log on with stolen cookie information to an SAP system without knowing the username and password or needing to supply MFA!
+> [!NOTE]
+> You just were able to log on with stolen cookie information to an SAP system without knowing the username and password or needing to supply MFA!
+
+8. Enjoy your phish!🎉
 
 <p align="center" width="100%">
 <img alt="Cookie editor" src="assets/quest2/done.png"  width="600">

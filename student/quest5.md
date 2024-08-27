@@ -18,7 +18,7 @@ In quest 3 you configured simple alert forwarding to a Microsoft Teams Channel u
 * The following parameters may be useful when implementing the OpenAI integration. :
   * Target URI: https://dsag-hacker-in-a-day.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-06-01
   * API Version: `2024-06-01`
-  * Azure OpenAI API Key: `e38a900d0d3d4b42b09c8989b3354b90`
+  * Azure OpenAI API Key: `your-key`
 
 <p align="center" width="100%">
 <img alt="Step 32" src="assets/quest5/5-1.png"  width="600">
