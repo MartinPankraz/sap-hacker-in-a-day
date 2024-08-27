@@ -6,13 +6,15 @@ In this tutorial, you will perform basic deployments to set up your environment 
 
 ## Installation for hands-on lab
 
-Verify if a git client is present by running `git version` on your terminal.
+* Verify if a git client is present by running `git version` on your terminal.
 
 If not, [install](https://git-scm.com/downloads) as per your environment and clone this repos.
 
 ```bash
 git clone https://github.com/MartinPankraz/sap-hacker-in-a-day.git
 ```
+
+* For convenience scripts, install [PowerShell 7.4+](https://learn.microsoft.com/powershell/scripting/overview). It runs on any OS.
 
 ### Step 0: Spin up your hosting environment
 
@@ -26,8 +28,7 @@ We **recommend using a containerized environment** for a code based approach tha
 ### Step 1a: Build image from Dockerfile and Run container on your local machine
 
 * Follow install instructions for Docker/Podman and cross-platform PowerShell [here](../docker-kali/README.md).
-
-* Run below commands in sequence to build the image and run the container.
+* Run below commands in your terminal from the git repos in sequence to build the image and run the container.
 
 #### For Docker (with provided PowerShell scripts)
 
@@ -61,6 +62,9 @@ Once Evilginx shows up on your console as its own process, continue your setup..
 > ```
 >
 > This command takes you directly to the Evilginx command line interface.
+
+> [!IMPORTANT]
+> When restarting the config process, you will need to download the required certificate, and repeat config steps again. Run the command `.\get-crt.ps1` from the git repos in your terminal outside of the EvilGinx process.
 
 ### Step 2: Configure Evilginx3
 
@@ -103,7 +107,11 @@ We will use a sample phishlet for M365 shared by [Jan Bakker](https://github.com
 > [!NOTE]
 > [The phishlet](../docker-kali/microsoft365.yaml) has already been copied into the container and made available to EvilGinx through folder `/usr/share/evilginx2/phishlets`.
 
-* Verify the M365 phishlet is loaded as expected.
+* Verify the M365 phishlet is loaded as expected and execute the command below to see the list of available phishlets.
+
+```bash
+phishlets
+```
 
 <p align="center" width="100%">
 <img alt="new phishlet" src="assets/quest1/new-phishlet.png"  width="600">
@@ -160,13 +168,18 @@ lures get-url 0
 <img alt="creat fishing lure" src="assets/quest1/create-phishing-lure.png"  width="600">
 </p>
 
-* Open the generated URL (https://login.dsag-red-team.com/some-key) in your browser to see the phishing page.
+* Open the generated URL (https://login.dsag-red-team.com/some-key) in your browser to see the phishing page (see right part of below image for reference).
 
 * Check the Evilginx3 console for the captured output so far ("new visitor has arrived" etc.).
+
+* Finally, supply the Entra ID credentials (+ MFA if configured) to trigger a login on SAP and see the captured data in the Evilginx3 console.
 
 <p align="center" width="100%">
 <img alt="new visitor" src="assets/quest1/new-visitor.png"  width="600">
 </p>
+
+> [!TIP]
+> Hitting `blacklisted ip address` issues? Verify if you executed all configuration steps correctly first. If still doesn't help: run the command `blacklist off` in the Evilginx3 CLI.
 
 ## Update the [leaderboard](https://forms.office.com/r/aYH8rh7vp5) with your progress⏱
 

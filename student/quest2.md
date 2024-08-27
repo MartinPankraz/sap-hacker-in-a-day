@@ -75,7 +75,6 @@ sessions
 ```bash
 sessions 1
 ```
-
   
 3. Copy the session cookie
  
@@ -83,7 +82,7 @@ sessions 1
 <img alt="Cookie editor" src="assets/quest2/copy-cookie.png"  width="600">
 </p>
 
-1. Open a private browser window (note that some policies interfere with the login!) or change browser to avoid conflicts with the current session.
+4. Open a private browser window (note that some policies interfere with the login!) or change browser to avoid conflicts with the current session. Be aware that browser extensions often need to be activated in the private window first too.
 
 > [!TIP]
 > Consider wiping the cookies from the current browser session to be absolutely sure you are not logged in with your own account.
@@ -95,24 +94,25 @@ sessions 1
 
 5. Navigate to the SAP Fiori Launchpad: `https://your-sap-domain:port/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=001&sap-language=EN#Shell-home` and wait for the redirect to `login.microsoftonline.com`.
 
-6. Open your cookie extension, delete all existing cookies, click Import, 
+6. Open your cookie extension, delete all existing cookies 🗑, click Import,
+
 <p align="center" width="100%">
 <img alt="Cookie editor" src="assets/quest2/cookie-editor0.png"  width="600">
 </p>
 
- 
- 
-paste the cookie you copied from the Evilginx3 console into your browser extension, and finish by clicking Import again.
+and paste the cookie you copied from the Evilginx3 console (see image from step 3) into your browser extension, and finish by clicking Import again.
 
 <p align="center" width="100%">
 <img alt="Cookie editor" src="assets/quest2/cookie-editor.png"  width="600">
 </p>
 
-7. Refresh the page and see the magic happen on the EvilGinx console and enjoy your phish! 🎉 You just were able to log on with stolen cookie information to an SAP system without knowing the username and password!
+7. Refresh the page and see the magic happen on the EvilGinx console and enjoy your phish!🎉
+
+You just were able to log on with stolen cookie information to an SAP system without knowing the username and password or needing to supply MFA!
+
 <p align="center" width="100%">
 <img alt="Cookie editor" src="assets/quest2/done.png"  width="600">
 </p>
-
 
 ## Update the [leaderboard](https://forms.office.com/r/aYH8rh7vp5) with your progress⏱
 

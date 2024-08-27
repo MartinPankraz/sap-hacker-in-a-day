@@ -40,17 +40,3 @@ If not, you will find the preliminary steps to setup the lab for participants [h
 ## 📢Feedback
 
 This repos encourages contributions and feedback via the [GitHub Issues](https://github.com/MartinPankraz/sap-hacker-in-a-day/issues/new/choose).
-
-## 🚸 Your Adventure Guides
-
-| Name             | Company  |
-| ---------------- | -------- |
-| [Martin Raepple](https://www.linkedin.com/in/martinraepple/)   | Microsoft |
-| [Holger Bruchelt](https://www.linkedin.com/in/holger-bruchelt/)  | Microsoft |
-| [Björn Scheuhing](https://www.linkedin.com/in/bjornscheuhing/)  | Microsoft |
-| [Prasenjit Roy](https://www.linkedin.com/in/prasenjit-roy-75836927/)  | Microsoft |
-| [Oliver Klausen](https://www.linkedin.com/in/oliver-klausen/)  | Microsoft |
-| [Stephan Bähr](https://www.linkedin.com/in/stephan-baehr/)  | Microsoft |
-| [Madalina Wagmann](https://www.linkedin.com/in/madalina-wagmann-sap-azure-specialist-pm/)  | Microsoft |
-| [Ofer Inbar](https://www.linkedin.com/in/ofer-inbar/)  | Microsoft |
-| [Martin Pankraz](https://www.linkedin.com/in/martin-pankraz/)   | Microsoft |
