@@ -1,0 +1,55 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "connections_azuresentinel_name": {
+            "defaultValue": "azuresentinel",
+            "type": "String"
+        },
+        "subscriptionId": {            
+            "type": "String"
+        },
+        "resourceGroup": {
+            "defaultValue": "DSAGWS-RG",
+            "type": "String"
+        },
+        "location": {
+            "defaultValue": "westeurope",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Web/connections",
+            "apiVersion": "2016-06-01",
+            "name": "[parameters('connections_azuresentinel_name')]",
+            "location": "[parameters('location')]",
+            "kind": "V1",
+            "properties": {
+                "displayName": "[parameters('connections_azuresentinel_name')]",
+                "authenticatedUser": {},
+                "customParameterValues": {},
+                "alternativeParameterValues": {},
+                "parameterValueType": "Alternative",
+                "statuses": [
+                    {
+                        "status": "Ready"
+                    }
+                ],
+                "createdTime": "2024-08-20T19:55:24.646536Z",
+                "changedTime": "2024-08-20T19:55:24.646536Z",
+                "api": {
+                    "name": "azuresentinel",
+                    "displayName": "Microsoft Sentinel",
+                    "description": "Cloud-native SIEM with a built-in AI so you can focus on what matters most",
+                    "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1702/1.0.1702.3810/azuresentinel/icon.png",
+                    "brandColor": "#0072C6",
+                    "id": "[concat('/subscriptions/', parameters('subscriptionId'), '/providers/Microsoft.Web/locations/', parameters('location'), '/managedApis/azuresentinel')]",
+                    "type": "Microsoft.Web/locations/managedApis"
+                },
+                "testLinks": []
+            }
+        }
+    ]
+}

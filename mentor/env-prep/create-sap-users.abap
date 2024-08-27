@@ -88,7 +88,7 @@ LOOP AT lt_csv_data INTO DATA(lv_csv_line).
 
   " Prepare the user data
   CLEAR: ls_logon_data, ls_user_address.
-  ls_logon_data-ustyp = 'A'.
+  ls_logon_data-ustyp = 'SERVICE'.
   ls_user_address-e_mail = lv_email.
 
   " Create user
@@ -125,3 +125,4 @@ LOOP AT lt_csv_data INTO DATA(lv_csv_line).
     TABLES
       profiles = lt_profiles
       return   = lt_return.
+ENDLOOP.

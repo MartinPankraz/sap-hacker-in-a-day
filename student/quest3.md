@@ -113,6 +113,12 @@ let specificUser = "your_specific_user"
 
 with your SAP user name, e.g. *"USER1"*.
 
+Click **Add new** to add a new data field to the alert custom details. Enter the name _GeoLocation_ for it, and select the _GeoLocation_ event parameter from the drop-down list.
+
+<p align="center" width="100%">
+<img alt="Step 16" src="assets/quest3/3-15-1.png"  width="600">
+</p>
+
 Change the **Query scheduling** settings to run the query every 5 minutes on SAP Audit Log data not older than 30 minutes. This time range should cover the audit log data captured from the successful attack at the end of [Quest 2](quest2.md).
 
 Click **Next: Incident settings**.
