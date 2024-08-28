@@ -95,7 +95,7 @@ sessions 1
 > [!IMPORTANT]
 > Use any [browser extension for cookie handling](https://microsoftedge.microsoft.com/addons/detail/cookieeditor/neaplmfkghagebokkhpjpoebhdledlfi) to apply the stolen cookie and impersonate the user.
 
-5. Navigate to the SAP Fiori Launchpad: `https://your-sap-domain:port/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=001&sap-language=EN#Shell-home` and wait for the redirect to `login.microsoftonline.com`.
+5. Navigate to the SAP Fiori Launchpad: `https://your-sap-domain:port/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=001&sap-language=EN&spnego=disabled#Shell-home` and wait for the redirect to `login.microsoftonline.com`.
 
 6. Open your cookie extension, delete all existing cookies 🗑, click Import,
 
