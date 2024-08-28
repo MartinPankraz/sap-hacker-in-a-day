@@ -86,7 +86,7 @@ config domain dsag-red-team.com
 
 #### Certificate handling
 
-* Get the required root certificate from EvilGinx using the command from your terminal outside of the EvilGinx process. This will copy the generated ca.crt file from the container to your hosting OS into the [docker-kali folder](../docker-kali/).
+* Get the required root certificate from EvilGinx using the [command](../docker-kali/get-crt.ps1) from your terminal outside of the EvilGinx process. This will copy the generated ca.crt file from the container to your hosting OS into the [docker-kali folder](../docker-kali/).
 
 ```bash
 .\get-crt.ps1

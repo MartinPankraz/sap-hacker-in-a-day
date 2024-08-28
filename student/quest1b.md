@@ -17,7 +17,7 @@ Our guidance here refers to a windows environment on an Azure VM. You can adjust
 
 ## Step 0: Manual installation prerequisites
 
-- Install [Git](https://git-scm.com/downloads) on your machine
+* Install [Git](https://git-scm.com/downloads) on your machine
 
 > [!TIP]
 > If you have not installed a Git client, you can also go directly to the [Evilginx3 repo](https://github.com/kgretzky/evilginx2), click on *Code* and *Download ZIP*. Once the ZIP file is downloaded extract it to your virtual machine. 
@@ -33,25 +33,25 @@ git clone https://github.com/kgretzky/evilginx2.git
 
 ### Step 1a: Build from source
 
-- Install [golang](https://go.dev/doc/install)
-- Restart your terminal and verify the installation with `go version` command.
+* Install [golang](https://go.dev/doc/install)
+* Restart your terminal and verify the installation with `go version` command.
 
 ```bash
 cd evilginx2
 .\build_run.bat
 ```
 
-- Allow Access on subsequent Defender firewall prompt like a vigilante in the making.
+* Allow Access on subsequent Defender firewall prompt like a vigilante in the making.
 
 ### Step 1b: Install the pre-built version if 1a does not work
 
 In case you are lucky you can follow the normal install steps:
 
-- Get the latest release from the [releases page](https://github.com/kgretzky/evilginx2/releases) (Assets -> evilginx*-64bit.zip) and follow the [quick start guide](https://help.evilginx.com/docs/getting-started/deployment/local).
+* Get the latest release from the [releases page](https://github.com/kgretzky/evilginx2/releases) (Assets -> evilginx*-64bit.zip) and follow the [quick start guide](https://help.evilginx.com/docs/getting-started/deployment/local).
 
-- Allow Access on subsequent Defender firewall prompt like a vigilante in the making.
+* Allow Access on subsequent Defender firewall prompt like a vigilante in the making.
 
-## Step 2: go back to the lead [Quest](quest1.md#step-2-configure-evilginx3) and continue with Step 2 normally
+## Step 2: Once EvilGinx is started, go back to [Quest](quest1.md#step-2-configure-evilginx3) and continue with Step 2 normally
 
 ## Where to next?
 
