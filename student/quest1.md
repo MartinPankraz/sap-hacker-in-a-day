@@ -92,6 +92,12 @@ config domain dsag-red-team.com
 .\get-crt.ps1
 ```
 
+For Podman, you can use the following command to copy the certificate to your local machine.
+
+```bash
+podman cp my-evilginx-container:/root/.evilginx/crt/ca.crt ./ca.crt
+```
+
 * Add this certificate to the **Trusted Root Certificate Authorities** store of the Current User (double click the file -> Install Certificate). Otherwise, you will get a certificate error when accessing the phishing page!
 
 <p align="center" width="100%">
