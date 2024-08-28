@@ -62,7 +62,7 @@ Our journey will start from the very beginning and will take you through the fol
 
 ## [Quest 2](quest2.md) - Weaponize your link and lure some phish
 
-🌟🌟🌟
+🌟🌟
 🕒 30 mins
 
 ## [Quest 3](quest3.md) - Analyze the catch with Sentinel for SAP and support remediation
@@ -76,7 +76,7 @@ Our journey will start from the very beginning and will take you through the fol
 
 ### [Quest 4 (optional)](quest4.md) - Create a custom detection rule
 
-🌟🌟🌟
+🌟🌟🌟🌟
 🕒 30 min
 
 ### [Quest 5 (optional)](quest5.md) - Generate a remediation with AI based on your custom rule
@@ -86,7 +86,7 @@ Our journey will start from the very beginning and will take you through the fol
 
 ## [Quest 6](quest6.md) - Destroy evidence of your evil deeds
 
-🌟🌟🌟
+🌟
 🕒 15 min
 
 Approach the last quest with a bang

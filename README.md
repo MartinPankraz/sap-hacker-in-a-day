@@ -2,11 +2,15 @@
 
 Welcome to your **red teaming hands-on lab** experience! This repos gets you all setup to embark on your assigned epic quest. Excited yet?
 
-## Introduction
-
 ```text
 Defenders often think in check lists to protect their SAP systems. Attackers think in graphs to exploit them. 
 ```
+
+Today you will be switching sides🦹🏻‍♂️.
+
+## Introduction
+
+Anyone with a very basic understanding of SAP systems and security can participate in this workshop. The workshop is designed to be self-paced and can be completed in 4 hours. The workshop is divided into multiple quests, each quest will have a set of tasks that you need to complete. Each quest will have a set of tasks that you need to complete.
 
 This workshop gives you a glimpse into the world of a [red team'er](https://en.wikipedia.org/wiki/Red_team). You will learn how to exploit a vulnerable SAP system login and how to detect & respond to ever evolving attacks.
 
@@ -18,11 +22,11 @@ This workshop gives you a glimpse into the world of a [red team'er](https://en.w
 > [!TIP]
 >🏆Finish the final quest, collect the pass phrase, and redeem it to claim [your badge](https://dsagwsrgb4f3.z1.web.core.windows.net/) 😎
 
-## What to expect
+## What else to expect
 
 When you are lucky enough to have signed-up to a guided experience with us like with [this DSAG event](https://dsagnet.de/event/sap-hacker-fur-einen-halben-tag), we will be providing the SAP system and Microsoft + Azure environment for you.
 
-If not, you will find the preliminary steps to setup the lab for participants [here](./student/README.md#when-not-in-a-guided-workshop-ensure-you-have).
+If not, you will find the preliminary steps to setup the lab yourself [here](./student/README.md#when-not-in-a-guided-workshop-ensure-you-have).
 
 ## 📌Buckle up and start your lab [**👉here**](student/README.md)📌
 

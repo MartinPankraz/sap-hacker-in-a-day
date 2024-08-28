@@ -11,7 +11,7 @@ As you will see in this hands-on lab, even that might not be good enough!
 Before we install anything and get started, lets take a look at our target system. Open the SAP Fiori Launchpad provided to you, e.g. 
 
 ```plaintext
-https://your-sap-domain:port/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=001&sap-language=EN#Shell-home
+https://your-sap-domain:port/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=001&sap-language=EN&spnego=disabled#Shell-home
 ```
 
 You will be redirected to the Entra-ID Login page. Once you are authenticated, you can access the SAP Fiori Launchpad with all the roles and permissions that are assigned to your user.
