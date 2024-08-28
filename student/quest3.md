@@ -136,7 +136,7 @@ Create a new automation rule for sending the notification to the SOC via Microso
 <img alt="Step 18" src="assets/quest3/3-18.png"  width="600">
 </p>
 
-Enter a name for your rule that identifies the user, e.g. *"User1 - Send notification to Teams"*. 
+Enter a name for your rule that identifies the user, e.g. *"User1 - Send notification to Teams"*. Make sure that the **Conditions** to run the _automation rule_ set the _Analytic rule name_ to the _Current rule_.
 
 Select **Run playbook** from **Actions**.
 
