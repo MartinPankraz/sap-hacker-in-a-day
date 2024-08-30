@@ -14,7 +14,10 @@ If not, [install](https://git-scm.com/downloads) as per your environment and clo
 git clone https://github.com/MartinPankraz/sap-hacker-in-a-day.git
 ```
 
-* For convenience scripts, install [PowerShell 7.4+](https://learn.microsoft.com/powershell/scripting/overview). It runs on any OS.
+> [!TIP]
+> If you are new to GitHub, you can alternatively also download the zip file from the [main page](https://github.com/MartinPankraz/sap-hacker-in-a-day/archive/refs/heads/main.zip) and extract it to your desired location.
+
+* For the provided convenience scripts used in the next section, install [PowerShell 7.4+](https://learn.microsoft.com/powershell/scripting/overview). It runs on any OS.
 
 ### Step 0: Spin up your hosting environment
 
