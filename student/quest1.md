@@ -31,12 +31,13 @@ We **recommend using a containerized environment** for a code based approach tha
 ### Step 1a: Build image from Dockerfile and Run container on your local machine
 
 * Follow install instructions for Docker/Podman and cross-platform PowerShell [here](../docker-kali/README.md).
+* Docker/Podman rely on WSL on Windows. [Install from here](https://learn.microsoft.com/windows/wsl/install#prerequisites).
 * Run below commands in your terminal from the git repos in sequence to build the image and run the container.
 
 #### For Docker (with provided PowerShell scripts)
 
 ```bash
-cd ..\docker-kali\
+cd .\docker-kali\
 .\build-image.ps1
 .\run-container.ps1
 ```
@@ -44,7 +45,7 @@ cd ..\docker-kali\
 #### For Podman (with plain bash commands)
 
 ```bash
-cd ../docker-kali/
+cd ./docker-kali/
 podman build -t my-evilginx-kali:latest .
 podman run -it -p 443:443 --name my-evilginx-container my-evilginx-kali:latest
 ```
