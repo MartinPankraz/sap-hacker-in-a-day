@@ -38,8 +38,13 @@ If not, you will find the preliminary steps to setup the lab yourself [here](./s
 
 * [Incident Response Series: Chapter #1 Phishing and cookie stolen with Evilginx](https://www.youtube.com/watch?v=D4trW5YM9PM)
 * [Sentinel for SAP - SOAR blog series with semi-automatic user block via Microsoft Teams](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-members/from-zero-to-hero-security-coverage-with-microsoft-sentinel-for-your/ba-p/13561790)
-* [SAP disrupt article](https://learn.microsoft.com/azure/sentinel/sap/deployment-attack-disrupt)
+* [SAP attack disrupt article](https://learn.microsoft.com/azure/sentinel/sap/deployment-attack-disrupt)
 * [Securing Multi-Cloud Gen AI workloads](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/securing-multi-cloud-gen-ai-workloads-using-azure-native/ba-p/4222728)
+
+### Manipulation toolsets
+
+* [Token Tactics](https://github.com/rvrsh3ll/TokenTactics)
+* [Evilginx](https://help.evilginx.com/docs/intro)
 
 ## 📢Feedback
 

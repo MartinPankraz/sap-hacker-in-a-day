@@ -2,11 +2,11 @@
 
 [< Quest 2 ](quest2.md) - **[🏠Home](../README.md)** - [ Quest 4 >](quest4.md)
 
-In quest 2 you were part of the red team and have compromised a login to SAP using the Fiori Launchpad. That action left a trail on the SAP audit log. Now, it's time to **switch to the blue team** and analyze the catch with Microsoft Sentinel for SAP.
+In quest 2 you were part of the red team and have compromised a login to SAP using the Fiori Launchpad. That action left a trail on the SAP audit log. Now, it's time to **switch to the blue team** and analyze the catch with Microsoft Sentinel for SAP and prepare to trigger automatic actions to support remediation.
 
 ## 🎯 Objectives
 
-SIEM tools like [Microsoft Sentinel](https://learn.microsoft.com/azure/sentinel/) can pick this up and run automatic analytics on it. In this quest, you will analyze your log entry, identify the out-of-the-box rule that fired on your activity, and create a playbook (aka [Azure LogicApps](https://learn.microsoft.com/azure/logic-apps/)) to forward the alert to your SOC ([Security Operations Center](https://www.microsoft.com/security/business/security-101/what-is-a-security-operations-center-soc)) Microsoft Teams channel for notification.
+SIEM tools like [Microsoft Sentinel](https://learn.microsoft.com/azure/sentinel/) can pick up malicious activity, run automatic analytics on it, suggest remediation or act immediately yon it. In this quest, you will analyze your log entry, identify the out-of-the-box rule that fired on your activity, and create a playbook (aka [Azure LogicApps](https://learn.microsoft.com/azure/logic-apps/)) to forward the alert to your SOC ([Security Operations Center](https://www.microsoft.com/security/business/security-101/what-is-a-security-operations-center-soc)) Microsoft Teams channel for notification.
 
 ### Login to Azure Portal
 
@@ -63,6 +63,7 @@ Go back to the Sentinel main navigation menu by clicking the link in the breadcr
 </p>
 
 ### Automate threat detection for the scenario with an Analytic Rule
+
 Sentinel uses built-in and custom analytics rules to detect threats. These rules are based on known attack patterns and behaviors, and they continuously analyze data from various sources to identify suspicious activities.
 
 Let's start this journey by inspecting the current entries for the expected network ranges of *legitimate* login requests to your SAP system.
@@ -98,7 +99,7 @@ Select the default Kusto query from the built-in rule and copy it to the clipboa
 <img alt="Step 13" src="assets/quest3/3-13.png"  width="600">
 </p>
 
-To avoid interference with the other users we only want to detect threats for your specific user. Therefore, the query must be changed accordingly. 
+To avoid interference with the other users we only want to detect threats for your specific user. Therefore, the query must be changed accordingly.
 
 You can seek help from [Microsoft Copilot](https://copilot.microsoft.com/) by entering the a prompt like *"How do I change the following Kusto query to filter only audit log message for a specific user?"*, followed by the built-in query you copied before to the clipboard.  
 <p align="center" width="100%">
@@ -244,6 +245,9 @@ The link takes you directly to the incident details in Sentinel.
 </p>
 
 Congratulations for completing quest 3!
+
+> [!TIP]
+> In case you are curious about automatically blocking the compromised SAP user, check this blog series on [Sentinel for SAP - SOAR](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-members/from-zero-to-hero-security-coverage-with-microsoft-sentinel-for-your/ba-p/13561790). It shows how to use the built-in playbooks of the Sentinel for SAP solution for that matter.
 
 ## Update the [leaderboard](https://forms.office.com/r/aYH8rh7vp5) with your progress⏱
 
