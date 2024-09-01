@@ -2,21 +2,27 @@
 
 [< Quest 2 ](quest2.md) - **[🏠Home](../README.md)** - [ Quest 4 >](quest4.md)
 
-In quest 2 you have logged in to SAP using the Fiori Launchpad. That action leaves a trail on the SAP audit log. SIEM tools like [Microsoft Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/) can pick this up and run automatic analytics on it. In this quest, you will analyze your log entry, identify the out-of-the-box rule that fired on your activity, and create a playbook (aka [Azure LogicApps](https://learn.microsoft.com/en-us/azure/logic-apps/)) to forward the alert to your SOC ([Security Operations Center](https://www.microsoft.com/en-us/security/business/security-101/what-is-a-security-operations-center-soc)) Microsoft Teams channel for notification.
+In quest 2 you were part of the red team and have compromised a login to SAP using the Fiori Launchpad. That action left a trail on the SAP audit log. Now, it's time to **switch to the blue team** and analyze the catch with Microsoft Sentinel for SAP.
+
+## 🎯 Objectives
+
+SIEM tools like [Microsoft Sentinel](https://learn.microsoft.com/azure/sentinel/) can pick this up and run automatic analytics on it. In this quest, you will analyze your log entry, identify the out-of-the-box rule that fired on your activity, and create a playbook (aka [Azure LogicApps](https://learn.microsoft.com/azure/logic-apps/)) to forward the alert to your SOC ([Security Operations Center](https://www.microsoft.com/security/business/security-101/what-is-a-security-operations-center-soc)) Microsoft Teams channel for notification.
 
 ### Login to Azure Portal
+
 Login with your user (e.g. user1@bestruncorp.onmicrosoft.com) to the [Azure Portal](https://portal.azure.com).
 <p align="center" width="100%">
 <img alt="Step 1" src="assets/quest3/3-1.png"  width="600">
 </p>
 
-### Open Microsoft Sentinel 
+### Open Microsoft Sentinel
+
 In the search bar, enter "Sentinel", and click on Microsoft Sentinel under the search results.
 <p align="center" width="100%">
 <img alt="Step 2" src="assets/quest3/3-2.png"  width="600">
 </p>
 
-Microsoft Sentinel leverages Log Analytics Workspaces ([LAW](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-workspace-overview)) as a fundamental component for its operations. Essentially, Log Analytics Workspaces serve as a logical container for logs, enabling Sentinel to collect, analyze, and act on telemetry data from various sources, including Azure and on-premises environments.
+Microsoft Sentinel leverages Log Analytics Workspaces ([LAW](https://learn.microsoft.com/azure/azure-monitor/logs/log-analytics-workspace-overview)) as a fundamental component for its operations. Essentially, Log Analytics Workspaces serve as a logical container for logs, enabling Sentinel to collect, analyze, and act on telemetry data from various sources, including Azure and on-premises environments.
 
 Select the **dsagwslaw** LAW.
 <p align="center" width="100%">
@@ -24,7 +30,8 @@ Select the **dsagwslaw** LAW.
 </p>
 
 ### Inspect the SAP Audit Log data in Sentinel
-Microsoft Sentinel uses the [Data Connector for SAP Solutions](https://learn.microsoft.com/en-us/azure/sentinel/sap/solution-overview) to enhance its monitoring and security capabilities for SAP systems. This integration allows Sentinel to ingest and analyze data from SAP environments, providing comprehensive visibility and threat detection across all layers of the SAP ecosystem.
+
+Microsoft Sentinel uses the [Data Connector for SAP Solutions](https://learn.microsoft.com/azure/sentinel/sap/solution-overview) to enhance its monitoring and security capabilities for SAP systems. This integration allows Sentinel to ingest and analyze data from SAP environments, providing comprehensive visibility and threat detection across all layers of the SAP ecosystem.
 
 Click **Data Connectors** from the navigation menu, select the **Microsoft Sentinel for SAP** connector from the list, and click on **Open connector page**.
 <p align="center" width="100%">
@@ -41,7 +48,7 @@ In the logs query start by changing the time range to the last 30 minutes.
 <img alt="Step 6" src="assets/quest3/3-6.png"  width="600">
 </p>
 
-Microsoft Sentinel uses the Kusto Query Language ([KQL](https://learn.microsoft.com/en-us/azure/sentinel/kusto-overview)) extensively to perform various tasks such as searching, analyzing, and visualizing data. KQL is a powerful tool designed to work with large datasets in Azure, and it is used by several Azure services, including Azure Monitor, Azure Data Explorer, and Microsoft Sentinel.
+Microsoft Sentinel uses the Kusto Query Language ([KQL](https://learn.microsoft.com/azure/sentinel/kusto-overview)) extensively to perform various tasks such as searching, analyzing, and visualizing data. KQL is a powerful tool designed to work with large datasets in Azure, and it is used by several Azure services, including Azure Monitor, Azure Data Explorer, and Microsoft Sentinel.
 
 To query the SAP Audit Log for logins of your user (e.g. user1@bestruncorp.onmicrosoft.com), change the KQL expression as by adding a *where* clause. Then click **Run**.
 <p align="center" width="100%">
@@ -222,7 +229,7 @@ Click on the message in the search results.
 <img alt="Step 30" src="assets/quest3/3-30.png"  width="600">
 </p>
 
-The playbook posted an [Adaptive Card](https://learn.microsoft.com/en-us/adaptive-cards/) to teams with a deep link to the generated incident in the Azure Portal.
+The playbook posted an [Adaptive Card](https://learn.microsoft.com/adaptive-cards/) to teams with a deep link to the generated incident in the Azure Portal.
 
 Click on the **incident link**.
 
