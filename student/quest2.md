@@ -120,6 +120,9 @@ and paste the cookie you copied from the Evilginx3 console (see image from step 
 <img alt="Cookie editor" src="assets/quest2/done.png"  width="600">
 </p>
 
+> [!NOTE]
+> To raise the bar for attackers, consider [Phish-resistant Multi-Factor Authentication](https://learn.microsoft.com/entra/identity/authentication/concept-authentication-strengths). In addition to that [conditional access policies](https://learn.microsoft.com/entra/identity/conditional-access/overview) can be used to block access from certain locations or devices.
+
 Next, we will switch to the defender's perspective - the **blue team** - and learn how to detect and prevent such attacks.
 
 ## Update the [leaderboard](https://forms.office.com/r/aYH8rh7vp5) with your progress⏱

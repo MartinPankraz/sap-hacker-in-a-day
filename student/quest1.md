@@ -34,6 +34,9 @@ We **recommend using a containerized environment** for a code based approach tha
 * Docker/Podman rely on WSL on Windows. [Install from here](https://learn.microsoft.com/windows/wsl/install#prerequisites).
 * Run below commands in your terminal from the git repos in sequence to build the image and run the container.
 
+> [!TIP]
+> In case powershell fails with a message like "cannot be loaded because the execution of scripts is disabled on this system", consider running the command `set-executionpolicy remotesigned` to allow script execution. If not you may also run the commands contained in the scripts manually.
+
 #### For Docker (with provided PowerShell scripts)
 
 ```bash

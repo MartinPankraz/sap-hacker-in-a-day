@@ -40,6 +40,7 @@ If not, you will find the preliminary steps to setup the lab yourself [here](./s
 * [Sentinel for SAP - SOAR blog series with semi-automatic user block via Microsoft Teams](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-members/from-zero-to-hero-security-coverage-with-microsoft-sentinel-for-your/ba-p/13561790)
 * [SAP attack disrupt article](https://learn.microsoft.com/azure/sentinel/sap/deployment-attack-disrupt)
 * [Securing Multi-Cloud Gen AI workloads](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/securing-multi-cloud-gen-ai-workloads-using-azure-native/ba-p/4222728)
+* [Phish-resistant Multi-Factor Authentication](https://learn.microsoft.com/entra/identity/authentication/concept-authentication-strengths)
 
 ### Manipulation toolsets
 
