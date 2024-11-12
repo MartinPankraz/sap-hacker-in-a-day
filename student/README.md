@@ -16,6 +16,11 @@
 > [!IMPORTANT]
 > An 'Important' box will will provide mandatory instructions to avoid pitfalls.
 
+This black arrow un-collapses hidden content.
+
+<details><summary>Some teaser text</summary>
+</details>
+
 ## Lab prerequisites
 
 > [!IMPORTANT]
