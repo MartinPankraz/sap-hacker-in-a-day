@@ -11,8 +11,6 @@ In case corporate policies or any other reason prevent your from installing the 
     * Spin up environments with [Azure VMs](https://azure.microsoft.com/free/) with free credits or
     * Any other available to you.
 
-During the guided lab experience we may have pre-configured environments available for you to use. If not, you can follow the steps below to set up your own environment.
-
 Our guidance here refers to a windows environment on an Azure VM. You can adjust the steps to your environment.
 
 ## Step 0: Manual installation prerequisites
@@ -20,7 +18,7 @@ Our guidance here refers to a windows environment on an Azure VM. You can adjust
 * Install [Git](https://git-scm.com/downloads) on your machine
 
 > [!TIP]
-> If you have not installed a Git client, you can also go directly to the [Evilginx3 repo](https://github.com/kgretzky/evilginx2), click on *Code* and *Download ZIP*. Once the ZIP file is downloaded extract it to your virtual machine. 
+> If you have not installed a Git client, you can also go directly to the [Evilginx3 repo](https://github.com/kgretzky/evilginx2), click on *Code* and *Download ZIP*. Once the ZIP file is downloaded extract it to your virtual machine.
 
 > [!IMPORTANT]
 > Many of you will run into Defender detections with the executable upon [download](https://github.com/kgretzky/evilginx2/releases). Consider [building the tool from source](#build-from-source) in such cases.

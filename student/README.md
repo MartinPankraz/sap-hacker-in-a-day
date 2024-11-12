@@ -19,18 +19,21 @@
 ## Lab prerequisites
 
 > [!IMPORTANT]
-> A machine (virtual or physical) with **local admin rights** is mandatory to download, install and run the required software.
+> A machine (virtual or physical) with **local admin rights** is mandatory to download, install and run the required software!
+
+> [!WARNING]
+> Even with a guided workshop you need to be able to use RDP connections. Corporate firewalls may block RDP connections to unknown destinations. If you are unable to connect, please try a personal device instead.
+
+Guided workshop participants can directly go to the [next section](#️epic-quests).
 
 > [!IMPORTANT]
-> <details><summary>When not in a guided workshop ensure you have...</summary>
-> - **Azure Subscription**: If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/).
-> - **Setup a phishing simulation tool** of your choice. Following screenshots and video references refer to Evilginx3.
-> - **A phishing target**: This could be a test account and sandbox system that has a web experience with your Identity Provider (IdP) configured for login. We will use a sample [SAP system and Microsoft Entra ID](https://learn.microsoft.com/entra/identity/saas-apps/sap-netweaver-tutorial) for this tutorial.
-> - **A Sentinel for SAP instance**: Learn more about the free trial [here](https://azure.microsoft.com/pricing/offers/microsoft-sentinel-sap-promo/).
-> - **An SAP instance connected to Sentinel for SAP**: Learn more about how to onboard [here](https://learn.microsoft.com/azure/sentinel/sap/deployment-overview).
+> <details><summary>When <b>not</b> in a guided workshop ensure you have...</summary>
+> <b>Azure Subscription</b>: If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/).</br>
+> <b>Setup a phishing simulation tool</b> of your choice. Following screenshots and video references refer to Evilginx3.</br>
+> <b>A phishing target</b>: This could be a test account and sandbox system that has a web experience with your Identity Provider (IdP) configured for login. We will use a sample [SAP system and Microsoft Entra ID](https://learn.microsoft.com/entra/identity/saas-apps/sap-netweaver-tutorial) for this tutorial.</br>
+> <b>A Sentinel for SAP instance</b>: Learn more about the free trial [here](https://azure.microsoft.com/pricing/offers/microsoft-sentinel-sap-promo/).</br>
+> <b>An SAP instance connected to Sentinel for SAP</b>: Learn more about how to onboard [here](https://learn.microsoft.com/azure/sentinel/sap/deployment-overview).
 > </details>
-
-Guided workshop participants can go to the [next section](#️epic-quests).
 
 > [!TIP]
 > Optionally, configure your [Entra ID instance to enforce MFA](https://learn.microsoft.com/entra/identity/authentication/tutorial-enable-azure-mfa). This will help you to see how the phishing simulation tool can be used to bypass MFA.
