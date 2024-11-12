@@ -8,7 +8,7 @@ As you will see in this hands-on lab, even that might not be good enough!
 
 ## The Target: SAP Fiori Launchpad
 
-Before we install anything and get started, lets take a look at our target system. Open the SAP Fiori Launchpad provided to you, e.g. 
+Before we install anything and get started, lets take a look at our target system. Open the SAP Fiori Launchpad provided to you. It looks something like this with a proper domain of course.
 
 ```plaintext
 https://your-sap-domain:port/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=001&sap-language=EN&spnego=disabled#Shell-home
@@ -21,7 +21,7 @@ You will be redirected to the Entra-ID Login page. Once you are authenticated, y
 </p>
 
 > [!NOTE]
-> In our scenario MFA is not configured, because all participants would have needed to run through the setup process with their own mobile phone and the Microsoft Authenticator app. Usually you would need to run through the MFA process using Entra-ID via your mobile device.
+> In such lab environments MFA is often not configured, because otherwise all participants would have needed to run through the setup process with their own mobile phone and the Microsoft Authenticator app.
 
 ## The evil proxy
 

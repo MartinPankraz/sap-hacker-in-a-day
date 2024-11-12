@@ -4,7 +4,28 @@
 
 In this tutorial, you will perform basic deployments to set up your environment for the hands-on lab. You will also learn how to install a phishing simulation tool called [EvilGinx](https://help.evilginx.com/docs/intro) to prepare for the next quest.
 
+A common practice for "playing" with hacking tools is to utilize an *isolated environment* instead of your "bare" machine. This can be a container or a virtual machine. This way, you can *keep your main machine clean* and avoid any unintended consequences.
+
 ## Installation for hands-on lab
+
+### Guided experience
+
+If you are lucky enough to have signed-up to a guided experience with us like with [this DSAG event](https://dsagnet.de/event/sap-hacker-fur-einen-tag-virtuell), we will be providing pre-configured virtual machines for you.
+
+To get started with one of those, open your RDP client (type `MSTSC` on the search bar on Windows) on your laptop and connect to the provided VM using your allocated IP address, user name, and password.
+
+> [!WARNING]
+> Corporate firewalls may block RDP connections to unknown destinations. If you are unable to connect, please try a personal device instead.
+
+Continue with the [next section](#step-1-start-evilginx3-process) to configure Evilginx3.
+
+### Unguided experience
+
+In case you are not part of a guided workshop, you will find the preliminary steps to setup the lab yourself below.
+
+<details><summary>Spin up your hosting environment</summary>
+
+#### Sanity Checks
 
 * Verify if a git client is present by running `git version` on your terminal.
 
@@ -19,7 +40,7 @@ git clone https://github.com/MartinPankraz/sap-hacker-in-a-day.git
 
 * For the provided convenience scripts used in the next section, install [PowerShell 7.4+](https://learn.microsoft.com/powershell/scripting/overview). It runs on any OS.
 
-### Step 0: Spin up your hosting environment
+#### Step 0: Spin up your hosting environment
 
 A common practice for "playing" with hacking tools is to utilize an *isolated environment* instead of your "bare" machine. This can be a container or a virtual machine. This way, you can *keep your main machine clean* and avoid any unintended consequences. Below are a couple of suggestions.
 
@@ -28,7 +49,7 @@ We **recommend using a containerized environment** for a code based approach tha
 * [Step 1a](#step-1a-build-image-from-dockerfile-and-run-container-on-your-local-machine) - Use container runtime like Docker/Podman on your local machine or
 * [Step 1b](quest1b.md) - Use a virtual machine with a hypervisor like VirtualBox or Hyper-V on your local machine or cloud-based virtual machine like Azure VMs.
 
-### Step 1a: Build image from Dockerfile and Run container on your local machine
+#### Step 1a: Build image from Dockerfile and Run container on your local machine
 
 * Follow install instructions for Docker/Podman and cross-platform PowerShell [here](../docker-kali/README.md).
 * Docker/Podman rely on WSL on Windows. [Install from here](https://learn.microsoft.com/windows/wsl/install#prerequisites).
@@ -37,7 +58,7 @@ We **recommend using a containerized environment** for a code based approach tha
 > [!TIP]
 > In case powershell fails with a message like "cannot be loaded because the execution of scripts is disabled on this system", consider running the command `set-executionpolicy remotesigned` to allow script execution. If not you may also run the commands contained in the scripts manually.
 
-#### For Docker (with provided PowerShell scripts)
+##### For Docker (with provided PowerShell scripts)
 
 ```bash
 cd .\docker-kali\
@@ -45,7 +66,16 @@ cd .\docker-kali\
 .\run-container.ps1
 ```
 
-#### For Podman (with plain bash commands)
+> [!TIP]
+> The scripts are meant for initial execution. When revisiting the container after a break or similar, run the following from within the container to reach operational status again:
+>
+> ```bash
+> docker start -ia my-evilginx-container
+> ```
+>
+> This command takes you directly to the Evilginx command line interface.
+
+##### For Podman (with plain bash commands)
 
 ```bash
 cd ./docker-kali/
@@ -55,15 +85,30 @@ podman run -it -p 443:443 --name my-evilginx-container my-evilginx-kali:latest
 
 This will create the `my-evilginx-container` with fixed names for static referencing for downstream commands.
 
+Continue with the [next section](#step-2-configure-evilginx3) to configure Evilginx3.
+
+</details>
+
+### Step 1: Start Evilginx3 process
+
+The guided experience uses the container engine podman with the image Kali Linux purpose-built for security and pen-testing.
+
+```bash
+podman machine init
+podman machine set --rootful
+podman machine start
+cd ./docker-kali/
+podman build -t my-evilginx-kali:latest .
+podman run -it -p 443:443 --name my-evilginx-container my-evilginx-kali:latest
+```
+
+This will create the `my-evilginx-container` with a fixed name for static referencing for downstream commands.
+
 Once Evilginx shows up on your console as its own process, continue your setup...
 
 > [!TIP]
 > The scripts are meant for initial execution. When revisiting the container after a break or similar, run the following from within the container to reach operational status again:
 >
-> ```bash
-> docker start -ia my-evilginx-container
-> ```
-> or
 > ```bash
 > podman start -ia my-evilginx-container
 > ```
@@ -71,11 +116,11 @@ Once Evilginx shows up on your console as its own process, continue your setup..
 > This command takes you directly to the Evilginx command line interface.
 
 > [!IMPORTANT]
-> When restarting the config process, you will need to download the required certificate, and repeat config steps again. Run the command `.\get-crt.ps1` from the git repos in your terminal outside of the EvilGinx process.
+> When restarting the config process, you will need to download the required certificate, and repeat config steps again. Run the command `.\get-crt.ps1` from the git repos in another terminal outside of the EvilGinx process.
 
 ### Step 2: Configure Evilginx3
 
-See the official documentation for reference [here](https://help.evilginx.com/docs/intro).
+_See the official documentation for reference [here](https://help.evilginx.com/docs/intro)._
 
 Run below commands using the CLI of Evilginx3 to configure the tool.
 
@@ -95,11 +140,7 @@ config domain dsag-red-team.com
 
 * Get the required root certificate from EvilGinx using the [command](../docker-kali/get-crt.ps1) from your terminal outside of the EvilGinx process. This will copy the generated ca.crt file from the container to your hosting OS into the [docker-kali folder](../docker-kali/).
 
-```bash
-.\get-crt.ps1
-```
-
-For Podman, you can use the following command to copy the certificate to your local machine.
+Use the following podman command to copy the certificate to your local machine.
 
 ```bash
 podman cp my-evilginx-container:/root/.evilginx/crt/ca.crt ./ca.crt
@@ -112,6 +153,13 @@ podman cp my-evilginx-container:/root/.evilginx/crt/ca.crt ./ca.crt
 </p>
 
 In some cases, you may need to restart your machine for the certificate changes to take effect.
+
+> [!NOTE]
+> For Docker, you can use the following command to copy the certificate to your local machine.
+>
+> ```bash
+> .\get-crt.ps1
+> ```
 
 ### Step 3: Create or retrieve a phishlet for your scenario
 

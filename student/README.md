@@ -21,18 +21,19 @@
 > [!IMPORTANT]
 > A machine (virtual or physical) with **local admin rights** is mandatory to download, install and run the required software.
 
-### When not in a guided workshop ensure you have
+> [!IMPORTANT]
+> <details><summary>When not in a guided workshop ensure you have...</summary>
+> - **Azure Subscription**: If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/).
+> - **Setup a phishing simulation tool** of your choice. Following screenshots and video references refer to Evilginx3.
+> - **A phishing target**: This could be a test account and sandbox system that has a web experience with your Identity Provider (IdP) configured for login. We will use a sample [SAP system and Microsoft Entra ID](https://learn.microsoft.com/entra/identity/saas-apps/sap-netweaver-tutorial) for this tutorial.
+> - **A Sentinel for SAP instance**: Learn more about the free trial [here](https://azure.microsoft.com/pricing/offers/microsoft-sentinel-sap-promo/).
+> - **An SAP instance connected to Sentinel for SAP**: Learn more about how to onboard [here](https://learn.microsoft.com/azure/sentinel/sap/deployment-overview).
+> </details>
 
-- **Azure Subscription**: If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/).
-- **Setup a phishing simulation tool** of your choice. Following screenshots and video references refer to Evilginx3.
-- **A phishing target**: This could be a test account and sandbox system that has a web experience with your Identity Provider (IdP) configured for login. We will use a sample [SAP system and Microsoft Entra ID](https://learn.microsoft.com/entra/identity/saas-apps/sap-netweaver-tutorial) for this tutorial.
-- **A Sentinel for SAP instance**: Learn more about the free trial [here](https://azure.microsoft.com/pricing/offers/microsoft-sentinel-sap-promo/).
-- **An SAP instance connected to Sentinel for SAP**: Learn more about how to onboard [here](https://learn.microsoft.com/azure/sentinel/sap/deployment-overview).
+Guided workshop participants can go to the [next section](#️epic-quests).
 
 > [!TIP]
 > Optionally, configure your [Entra ID instance to enforce MFA](https://learn.microsoft.com/entra/identity/authentication/tutorial-enable-azure-mfa). This will help you to see how the phishing simulation tool can be used to bypass MFA.
-
-Guided workshop participants can go to the [next section](#️epic-quests).
 
 ## 🧙🏾‍♀️Epic Quests
 
