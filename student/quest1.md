@@ -10,15 +10,13 @@ A common practice for "playing" with hacking tools is to utilize an *isolated en
 
 If you are lucky enough to have signed-up to a guided experience with us like with [this DSAG event](https://dsagnet.de/event/sap-hacker-fur-einen-tag-virtuell), we will be providing pre-configured virtual machines for you.
 
-To get started with one of those, open your RDP client (type `MSTSC` on the search bar on Windows) on your laptop and connect to the provided VM using your allocated IP address, user name, and password.
+To get started with one of those,
+
+* Open your RDP client (type `MSTSC` on the search bar on Windows) on your laptop and
+* connect to the provided VM using your allocated IP address, user name, and password.
 
 > [!WARNING]
 > Corporate firewalls may block RDP connections to unknown destinations. If you are unable to connect, please try a personal device instead.
-
-Continue with the [next section](#step-1-start-evilginx3-process) to configure Evilginx3.
-
-> [!TIP]
-> In case you are not part of a guided workshop, spin up your own hosting environment with install steps from [here](./quest1-unguided.md).
 
 ### Step 1: Start Evilginx3 process
 
