@@ -3,6 +3,7 @@
 # Define variables
 # Note: NSG manually created upfront and opened RDP port
 # A master VM saphackday00 is created manually and a snapshot is taken upfront
+# User name for student: dsag-gast and initial password: Welcome24#1234
 # Required installs: Git client, PowerShell 7.4+, Podman
 # Post install steps: git clone the repo to Desktop
 
