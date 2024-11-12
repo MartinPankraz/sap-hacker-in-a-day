@@ -22,10 +22,18 @@ To get started with one of those,
 
 The guided experience uses the container engine podman with the image Kali Linux purpose-built for security and pen-testing.
 
+* Navigate to your VM's desktop and open the terminal (powershell).
+* Execute the following commands to start the podman container runtime.
+
 ```bash
 podman machine init
 podman machine set --rootful
 podman machine start
+```
+
+* Open a parallel session on your terminal (second tab) and execute the following commands to start the Evilginx3 process.
+
+```bash
 cd ./docker-kali/
 podman build -t my-evilginx-kali:latest .
 podman run -it -p 443:443 --name my-evilginx-container my-evilginx-kali:latest
@@ -33,7 +41,7 @@ podman run -it -p 443:443 --name my-evilginx-container my-evilginx-kali:latest
 
 This will create the `my-evilginx-container` with a fixed name for static referencing for downstream commands.
 
-Once Evilginx shows up on your console as its own process, continue your setup...
+Once Evilginx shows up on your terminal as its own process, continue your setup...
 
 > [!TIP]
 > The scripts are meant for initial execution. When revisiting the container after a break or similar, run the following from within the container to reach operational status again:
