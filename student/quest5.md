@@ -104,7 +104,7 @@ In quest 3 you configured simple alert forwarding to a Microsoft Teams Channel u
 > [!NOTE]
 > This quest empowered you to design your own specialized remediation suggestions. See the [Copilot for Security documentation](https://microsoft.github.io/PartnerResources/skilling/microsoft-security-academy/microsoft-copilot-for-security#use-cases) for more info on out-of-the-box remediation suggestions.
 
-## Update the [leaderboard](https://forms.office.com/r/aYH8rh7vp5) with your progress⏱
+## Update the [leaderboard](https://martinpankraz.github.io/crispy-potato/) with your progress⏱
 
 ## Where to next?
 

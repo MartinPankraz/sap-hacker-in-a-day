@@ -17,7 +17,7 @@
 > [!TIP]
 >🏆Don't forget to claim [your badge](https://dsagwsrgb4f3.z1.web.core.windows.net/). Open the developer tools <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>i</kbd> on that website to find the passphrase on the website code. Search for "secret". 😎 May the ninja-cat be with you.
 
-## Update the [leaderboard](https://forms.office.com/r/aYH8rh7vp5) with your progress⏱
+## Update the [leaderboard](https://martinpankraz.github.io/crispy-potato/) with your progress⏱
 
 ## Where to next?
 

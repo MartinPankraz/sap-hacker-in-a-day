@@ -41,7 +41,7 @@ let trustedCountries = dynamic(['United States', 'Australia']);
 > </p>
 > Or use the KQL screen from earlier.
 
-## Update the [leaderboard](https://forms.office.com/r/aYH8rh7vp5) with your progress⏱
+## Update the [leaderboard](https://martinpankraz.github.io/crispy-potato/) with your progress⏱
 
 ## Where to next?
 

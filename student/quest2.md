@@ -125,7 +125,7 @@ and paste the cookie you copied from the Evilginx3 console (see image from step 
 
 Next, we will switch to the defender's perspective - the **blue team** - and learn how to detect and prevent such attacks.
 
-## Update the [leaderboard](https://forms.office.com/r/aYH8rh7vp5) with your progress⏱
+## Update the [leaderboard](https://martinpankraz.github.io/crispy-potato/) with your progress⏱
 
 ## Where to next?
 

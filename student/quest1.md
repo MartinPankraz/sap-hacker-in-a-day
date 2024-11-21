@@ -179,7 +179,7 @@ lures get-url 0
 > [!TIP]
 > Hitting `blacklisted ip address` issues? Verify if you executed all configuration steps correctly first. If still doesn't help: run the command `blacklist off` in the Evilginx3 CLI.
 
-## Update the [leaderboard](https://forms.office.com/r/aYH8rh7vp5) with your progress⏱
+## Update the [leaderboard](https://martinpankraz.github.io/crispy-potato/) with your progress⏱
 
 ## Where to next?
 
