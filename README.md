@@ -45,6 +45,11 @@ _If not, you will find the preliminary steps to setup the lab yourself [here](./
 * [Securing Multi-Cloud Gen AI workloads](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/securing-multi-cloud-gen-ai-workloads-using-azure-native/ba-p/4222728)
 * [Phish-resistant Multi-Factor Authentication](https://learn.microsoft.com/entra/identity/authentication/concept-authentication-strengths)
 
+## Microsoft Sentinel partnerships with SAP
+
+* [SAP Enterprise Threat Detection, cloud edition](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-sap/sap-enterprise-threat-detection-cloud-edition-joins-forces-with-microsoft/ba-p/13942075)
+* [SAP LogServ (RISE)](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-sap/announcing-limited-preview-of-sap-logserv-integration-with-microsoft/ba-p/13942180)
+
 ### Manipulation toolsets
 
 * [Token Tactics](https://github.com/rvrsh3ll/TokenTactics)
