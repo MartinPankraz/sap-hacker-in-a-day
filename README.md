@@ -14,6 +14,9 @@ Anyone with a very basic understanding of SAP systems and security can participa
 
 This workshop gives you a glimpse into the world of a [red team'er](https://en.wikipedia.org/wiki/Red_team). You will learn how to exploit a vulnerable SAP system login and how to detect & respond to ever evolving attacks.
 
+> [!TIP]
+> The concepts applied in this hack can be re-used with other products and services. Microsoft Sentinel, Entra ID and Azure are merely used to demonstrate and deepen understanding through hands-on experience.
+
 > [!IMPORTANT]
 > This work is merely a demonstration of what adept attackers can do. It is the defender's responsibility to take such attacks into consideration and find ways to protect their users against this type of attacks. The linked resources should be used only in legitimate penetration testing assignments or educational purposes. The authors are not responsible for any misuse of the tools mentioned.
 
