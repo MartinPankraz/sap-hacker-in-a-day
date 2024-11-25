@@ -8,7 +8,7 @@ A common practice for "playing" with hacking tools is to utilize an *isolated en
 
 ## Guided experience
 
-If you are lucky enough to have signed-up to a guided experience with us like with [this DSAG event](https://dsagnet.de/event/sap-hacker-fur-einen-tag-virtuell), we will be providing pre-configured virtual machines for you.
+If you are lucky enough to have signed-up to a guided experience with us like with [this DSAG event](https://dsagnet.de/event/sap-hacker-fur-einen-tag-virtuell), we will be providing sandboxes (pre-configured virtual machines) for you.
 
 To get started with one of those,
 
@@ -17,6 +17,13 @@ To get started with one of those,
 
 > [!WARNING]
 > Corporate firewalls may block RDP connections to unknown destinations. If you are unable to connect, please try a personal device instead.
+
+### Step 0: Sign-up to the leaderboard
+
+* Open the [leaderboard](https://martinpankraz.github.io/crispy-potato/) and sign-up with a flashy hacker name
+* See how you [rank](https://keepthescore.com/board/ncmkdskqrwjgr/) against your hacker peers.
+
+Now, back to your sandbox environment...
 
 ### Step 1: Start Evilginx3 process
 
