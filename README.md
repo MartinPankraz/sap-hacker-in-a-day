@@ -29,7 +29,7 @@ This workshop gives you a glimpse into the world of a [red team'er](https://en.w
 
 When you are lucky enough to have signed-up to a guided experience with us like with [this DSAG event](https://dsagnet.de/event/sap-hacker-fur-einen-tag-virtuell), we will be providing the SAP system and Microsoft + Azure environment for you.
 
-_If not, you will find the preliminary steps to setup the lab yourself [here](./student/README.md#when-not-in-a-guided-workshop-ensure-you-have)._
+_If not, you will find the preliminary steps to setup the lab yourself [here](./student/README.md#fallback-for-unguided-workshops)._
 
 ## 📌Buckle up and start your lab [**👉here**](student/README.md)📌
 
