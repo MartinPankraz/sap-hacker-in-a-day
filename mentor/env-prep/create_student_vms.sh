@@ -10,10 +10,14 @@
 # - PowerShell 7.4+ (https://learn.microsoft.com/powershell/scripting/overview),
 # - Podman (https://podman.io/docs/installation#windows)
 #
-# Post install steps: git clone the repo to Desktop
+# Post install steps:
+# - git clone the repo to Desktop
+# - run podman init sequence till evilginx shows up to ensure it is working
+#
+# Now scale the VMs using the script below
 
 resourceGroup="DSAG"  # Resource group for the VMs and PIPs
-location="germanywestcentral"
+location="northeurope"
 vmSize="Standard_D4s_v3"
 networkName="DSAG-vnet"
 subnetName="default"
@@ -26,7 +30,7 @@ diskPrefix="saphackdayosdisk"
 
 # Loop to create VMs with public IPs from master OS disk snapshot
 # Adjust number of VMs as needed
-for i in $(seq -w 1 30)
+for i in $(seq -w 1 10)
 do
   vmName="${vmPrefix}${i}"
   diskName="${diskPrefix}${i}"

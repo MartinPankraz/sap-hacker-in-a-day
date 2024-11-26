@@ -38,10 +38,15 @@ podman machine set --rootful
 podman machine start
 ```
 
-* Open a parallel session on your terminal (second tab) and execute the following commands to start the Evilginx3 process.
+* Verify the github project "sap-hacker-in-a-day" is present on your Desktop and navigate into the folder `docker-kali` from your terminal.
 
 ```bash
-cd ./docker-kali/
+cd .\Desktop\sap-hacker-in-a-day\docker-kali\
+```
+
+* Open a parallel session on your terminal (second tab or instance) and execute the following commands to start the Evilginx3 process.
+
+```bash
 podman build -t my-evilginx-kali:latest .
 podman run -it -p 443:443 --name my-evilginx-container my-evilginx-kali:latest
 ```
