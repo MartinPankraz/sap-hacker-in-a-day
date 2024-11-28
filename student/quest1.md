@@ -30,13 +30,20 @@ Now, back to your sandbox environment...
 The guided experience uses the container engine podman with the image Kali Linux purpose-built for security and pen-testing.
 
 * Navigate to your VM's desktop and open the terminal (powershell).
-* Execute the following commands to start the podman container runtime.
+* Execute the following commands to start the podman container.
 
 ```bash
-podman machine init
-podman machine set --rootful
 podman machine start
 ```
+
+> [!TIP]
+> In case no podman machine is present yet or your start command fails, execute the following commands to create a podman machine.
+>
+> ```bash
+> podman machine init
+> podman machine set --rootful
+> podman machine start
+> ```
 
 * Verify the github project "sap-hacker-in-a-day" is present on your Desktop and navigate into the folder `docker-kali` from your terminal.
 
@@ -87,13 +94,15 @@ config domain dsag-red-team.com
 
 #### Certificate handling
 
-* Get the required root certificate from EvilGinx using the [command](../docker-kali/get-crt.ps1) from your terminal outside of the EvilGinx process. This will copy the generated ca.crt file from the container to your hosting OS into the [docker-kali folder](../docker-kali/).
+* Get the required root certificate from EvilGinx using the below command from your terminal outside of the EvilGinx process. This will copy the generated ca.crt file from the container to your hosting OS into the [docker-kali folder](../docker-kali/).
 
 Use the following podman command to copy the certificate to your local machine.
 
 ```bash
 podman cp my-evilginx-container:/root/.evilginx/crt/ca.crt ./ca.crt
 ```
+
+_For Docker have a look [here](../docker-kali/get-crt.ps1)._
 
 * Add this certificate to the **Trusted Root Certificate Authorities** store of the Current User (double click the file -> Install Certificate). Otherwise, you will get a certificate error when accessing the phishing page!
 
