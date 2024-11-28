@@ -19,6 +19,7 @@
 resourceGroup="DSAG"  # Resource group for the VMs and PIPs
 location="germanywestcentral"  # Location for the VMs and PIPs
 vmSize="Standard_D4s_v3"
+# vmSize="Standard_D4s_v4"     # Alternative SKU size to use when your first SKU hits quota limits of e.g. 100
 networkName="DSAG-vnet"
 subnetName="default"
 nsgName="saphackday00485"
@@ -95,6 +96,13 @@ do
     --nsg $nsgName \
     --public-ip-address $ipName \
     --no-wait
+
+  # Check if the VM creation command was successful
+  if [ $? -ne 0 ]; then
+    echo "Failed to create VM $vmName with Public IP $ipName."
+    echo "Please check the error. In case you hit your 100 vCPU quota limit you might continue with another SKU"
+    exit 1
+  fi
 
   echo "VM $vmName creation initiated with Public IP $ipName."
 done
