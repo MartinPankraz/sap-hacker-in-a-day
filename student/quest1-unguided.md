@@ -4,6 +4,9 @@
 
 In case you are not part of a guided workshop, you will find the preliminary steps to setup the lab yourself below.
 
+> [!CAUTION]
+> Don't continue here if you are part of a guided workshop! The following steps are meant for hackers without pre-prepared setups! If you landed here by mistake go back to [quest1](quest1.md) or the [main page](../README.md).
+
 * Verify if a git client is present by running `git version` on your terminal.
 
 If not, [install](https://git-scm.com/downloads) as per your environment and clone this repos.

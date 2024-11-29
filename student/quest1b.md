@@ -2,6 +2,9 @@
 
 [ < Quest 1 ](quest1.md) - **[🏠Home](../README.md)**
 
+> [!CAUTION]
+> Don't continue here if you are part of a guided workshop. The following steps are meant for hackers without pre-prepared setups! If you landed here by mistake go back to [quest1](quest1.md) or the [main page](../README.md).
+
 In case corporate policies or any other reason prevent your from installing the required tools on your local machine, you can use:
 
 * Local virtual machines (embedded in your physical device)
