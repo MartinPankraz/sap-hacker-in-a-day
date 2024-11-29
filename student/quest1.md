@@ -15,8 +15,8 @@ To get started with one of those,
 * Open your RDP client (type `MSTSC` on the search bar on Windows) on your laptop and
 * connect to the provided VM using your allocated IP address, user name, and password.
 
-> [!WARNING]
-> Corporate firewalls may block RDP connections to unknown destinations. If you are unable to connect, please try a personal device instead.
+> [!CAUTION]
+> Corporate firewalls and VPNs may block RDP connections (port 3389) to unknown destinations. If you are unable to connect, please try a  a different network (e.g. home office) and/or a personal device instead. In rare cases port 3389 may also be closed at your home network for outbound traffic.
 
 ### Step 0: Sign-up to the leaderboard
 
