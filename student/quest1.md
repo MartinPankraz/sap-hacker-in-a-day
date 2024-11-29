@@ -51,7 +51,7 @@ podman machine start
 cd .\Desktop\sap-hacker-in-a-day\docker-kali\
 ```
 
-* Open a parallel session on your terminal (second tab or instance) and execute the following commands to start the Evilginx3 process.
+* Open a parallel session on your terminal (second tab or instance) and execute the following commands to start the Evilginx3 process. Note: you need to be in the same folder as the first session - run cd .\Desktop\sap-hacker-in-a-day\docker-kali\ to be sure!
 
 ```bash
 podman build -t my-evilginx-kali:latest .

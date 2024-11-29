@@ -4,7 +4,6 @@
 # Note: NSG manually created upfront and opened RDP port
 # A master VM saphackday00 is created manually and a snapshot is taken upfront
 # User name for student: dsag-gast and initial password: Welcome24#1234
-# Use a Windows 11 image for the master VM
 #
 # Required installs:
 # - Git client (https://git-scm.com/downloads),
@@ -18,8 +17,9 @@
 # Now scale the VMs using the script below
 
 resourceGroup="DSAG"  # Resource group for the VMs and PIPs
-location="northeurope"
+location="germanywestcentral"  # Location for the VMs and PIPs
 vmSize="Standard_D4s_v3"
+# vmSize="Standard_D4s_v4"     # Alternative SKU size to use when your first SKU hits quota limits of e.g. 100
 networkName="DSAG-vnet"
 subnetName="default"
 nsgName="saphackday00485"
@@ -28,6 +28,32 @@ diskPrefix="saphackdayosdisk"
 ipPrefix="saphackdaypip"
 snapshotName="saphackday00-disk-snapshot"
 diskPrefix="saphackdayosdisk"
+sourceVM="saphackday00"
+sourceVMRG="MGMT-GEWC-DEP01-INFRASTRUCTURE"
+
+# Check if the snapshot exists
+snapshotExists=$(az snapshot show --resource-group $resourceGroup --name $snapshotName --query "id" --output tsv 2>/dev/null)
+
+if [ -z "$snapshotExists" ]; then
+  # Deallocate the source VM
+  az vm deallocate --resource-group $sourceVMRG --name $sourceVM
+
+  # Retrieve the OS disk ID of the source VM
+  osDiskId=$(az vm show \
+    --resource-group $sourceVMRG \
+    --name $sourceVM \
+    --query "storageProfile.osDisk.managedDisk.id" \
+    --output tsv)
+
+  # Create the snapshot using the OS disk ID
+  az snapshot create \
+    --resource-group $resourceGroup \
+    --name $snapshotName \
+    --source $osDiskId \
+    --query "id" --output tsv
+else
+  echo "Snapshot $snapshotName already exists."
+fi
 
 # Loop to create VMs with public IPs from master OS disk snapshot
 # Adjust number of VMs as needed
@@ -70,6 +96,13 @@ do
     --nsg $nsgName \
     --public-ip-address $ipName \
     --no-wait
+
+  # Check if the VM creation command was successful
+  if [ $? -ne 0 ]; then
+    echo "Failed to create VM $vmName with Public IP $ipName."
+    echo "Please check the error. In case you hit your 100 vCPU quota limit you might continue with another SKU"
+    exit 1
+  fi
 
   echo "VM $vmName creation initiated with Public IP $ipName."
 done
