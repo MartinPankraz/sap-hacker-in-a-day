@@ -205,6 +205,9 @@ lures get-url 0
 
 * Open the generated URL (https://login.dsag-red-YourUserNo.com/some-key) in your browser to see the phishing page (see right part of below image for reference).
 
+> [!IMPORTANT]
+> The redirect/ infinite loop of logins you see is due to our simple phishlet setup. But that is ok, your session is recorded. Still a hacker would invest a little more to avoid this as it might tip off their efforts.
+
 * Check the Evilginx3 console for the captured output so far ("new visitor has arrived" etc.).
 
 * Finally, supply the Entra ID credentials (+ MFA if configured) to trigger a login on SAP and see the captured data in the Evilginx3 console.
