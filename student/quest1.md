@@ -85,8 +85,16 @@ Run below commands using the CLI of Evilginx3 to configure the tool.
 
 ```bash
 config ipv4 127.0.0.1
-config domain dsag-red-team.com
+config domain dsag-red-YourUserNo.com
 ```
+
+> [!CAUTION]
+> In case your EDR tool (like Microsoft Defender) starts flagging the suggested domain dsag-red-team.com, consider changing it. The hacker would too ;-). Alternatively, you may consider disabling the EDR tool for the duration of the exercise.
+>
+> <p align="center" width="100%">
+> <img alt="Configure evilginx3" src="assets/quest1/edr-report-browser-note.png"  width="400">
+> </p>
+>
 
 <p align="center" width="100%">
 <img alt="Configure evilginx3" src="assets/quest1/config-evilginx3.png"  width="600">
