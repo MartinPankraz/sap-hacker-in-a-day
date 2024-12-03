@@ -155,7 +155,7 @@ phishlets
 Run below commands using the CLI of Evilginx3 to prepare the phishing lure.
 
 ```bash
-phishlets hostname microsoft365 dsag-red-team.com
+phishlets hostname microsoft365 dsag-red-YourUserNo.com
 phishlets enable microsoft365 
 ```
 
@@ -198,7 +198,7 @@ lures get-url 0
 <img alt="creat fishing lure" src="assets/quest1/create-phishing-lure.png"  width="600">
 </p>
 
-* Open the generated URL (https://login.dsag-red-team.com/some-key) in your browser to see the phishing page (see right part of below image for reference).
+* Open the generated URL (https://login.dsag-red-YourUserNo.com/some-key) in your browser to see the phishing page (see right part of below image for reference).
 
 * Check the Evilginx3 console for the captured output so far ("new visitor has arrived" etc.).
 
