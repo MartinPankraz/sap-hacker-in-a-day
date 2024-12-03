@@ -58,7 +58,7 @@ cd .\Desktop\sap-hacker-in-a-day\docker-kali\
 
 ```bash
 podman build -t my-evilginx-kali:latest .
-podman run -it -p 8443:443 --name my-evilginx-container my-evilginx-kali:latest
+podman run -it -p 443:443 --name my-evilginx-container my-evilginx-kali:latest
 ```
 
 This will create the `my-evilginx-container` with a fixed name for static referencing for downstream commands.
