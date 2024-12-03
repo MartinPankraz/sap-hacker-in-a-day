@@ -142,7 +142,7 @@ Leave the settings unchanged and click **Next: Automated response**.
 Create a new automation rule for sending the notification to the SOC via Microsoft Teams by clicking **Add new**.
 
 > [!CAUTION]
-> Create the rule first without automation to avoid errors in the rule creation process. Reopen it afterwards and add the automation then.
+> Create the rule **first without automation** to avoid errors in the rule creation process. **Reopen** it afterwards and add the automation then.
 
 <p align="center" width="100%">
 <img alt="Step 18" src="assets/quest3/3-18.png"  width="600">
