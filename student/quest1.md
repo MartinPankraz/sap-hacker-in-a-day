@@ -75,7 +75,12 @@ Once Evilginx shows up on your terminal as its own process, continue your setup.
 > This command takes you directly to the Evilginx command line interface.
 
 > [!IMPORTANT]
-> When restarting the config process, you will need to download the required certificate, and repeat config steps again. Run the command `.\get-crt.ps1` from the git repos in another terminal outside of the EvilGinx process.
+> When restarting the config process, you will need to download the required certificate, and repeat config steps again. To restart the process, you can use the following command:
+>
+> ```bash
+> podman machine stop
+> podman machine rm podman-machine-default
+> ```
 
 ### Step 2: Configure Evilginx3
 
