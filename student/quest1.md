@@ -54,11 +54,11 @@ cd .\Desktop\sap-hacker-in-a-day\docker-kali\
 * Open a parallel session on your terminal (second tab or instance) and execute the following commands to start the Evilginx3 process.
 
 > [!NOTE]
-> You need to be in the same folder as the first session - run above `cd` command again to be sure!
+> You need to be in the same folder as the first session - run above `cd` command again to be sure! In case of port binding issues adjust the incoming port in the command below.
 
 ```bash
 podman build -t my-evilginx-kali:latest .
-podman run -it -p 443:443 --name my-evilginx-container my-evilginx-kali:latest
+podman run -it -p 8443:443 --name my-evilginx-container my-evilginx-kali:latest
 ```
 
 This will create the `my-evilginx-container` with a fixed name for static referencing for downstream commands.
