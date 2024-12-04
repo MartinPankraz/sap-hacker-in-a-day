@@ -6,7 +6,7 @@ In quest 2 you were part of the red team and have compromised a login to SAP usi
 
 ## 🎯 Objectives
 
-SIEM tools like [Microsoft Sentinel](https://learn.microsoft.com/azure/sentinel/) can pick up malicious activity, run automatic analytics on it, suggest remediation or act immediately yon it. In this quest, you will analyze your log entry, identify the out-of-the-box rule that fired on your activity, and create a playbook (aka [Azure LogicApps](https://learn.microsoft.com/azure/logic-apps/)) to forward the alert to your SOC ([Security Operations Center](https://www.microsoft.com/security/business/security-101/what-is-a-security-operations-center-soc)) Microsoft Teams channel for notification.
+SIEM tools like [Microsoft Sentinel](https://learn.microsoft.com/azure/sentinel/) can pick up malicious activity, run automatic analytics on it, suggest remediation or act immediately on it. In this quest, you will analyze your log entry, identify the out-of-the-box rule that fired on your activity, and create a playbook (aka [Azure LogicApps](https://learn.microsoft.com/azure/logic-apps/)) to forward the alert to your SOC ([Security Operations Center](https://www.microsoft.com/security/business/security-101/what-is-a-security-operations-center-soc)) Microsoft Teams channel for notification.
 
 ### Login to Azure Portal
 
