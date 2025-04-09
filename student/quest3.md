@@ -4,7 +4,13 @@
 
 In quest 2 you were part of the red team and have compromised a login to SAP using the Fiori Launchpad. That action left a trail on the SAP audit log. Now, it's time to **switch to the blue team** and analyze the catch with Microsoft Sentinel for SAP and prepare to trigger automatic actions to support remediation.
 
-## 🎯 Objectives
+## Learning Objectives 🎓
+
+- Understand how to analyze the SAP audit log data in SIEM tools like Microsoft Sentinel
+- Learn how to use analytic rules to detect logins from unexpected networks (Country/Region)
+- Gain insights how to send notifications to Microsoft Teams for incidents created by the analytic rule
+
+## Start defending your SAP system (blue team)
 
 SIEM tools like [Microsoft Sentinel](https://learn.microsoft.com/azure/sentinel/) can pick up malicious activity, run automatic analytics on it, suggest remediation or act immediately on it. In this quest, you will analyze your log entry, identify the out-of-the-box rule that fired on your activity, and create a playbook (aka [Azure LogicApps](https://learn.microsoft.com/azure/logic-apps/)) to forward the alert to your SOC ([Security Operations Center](https://www.microsoft.com/security/business/security-101/what-is-a-security-operations-center-soc)) Microsoft Teams channel for notification.
 

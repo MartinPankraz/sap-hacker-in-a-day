@@ -2,6 +2,11 @@
 
 [< Quest 5 ](quest5.md) - **[🏠Home](../README.md)**
 
+## Learning Objectives 🎓
+
+- Understand the value of hacker sandboxes and how to use them
+- See how to remove leftover files and clean up your environment
+
 ## Clean up the files you created during this tutorial
 
 * Revert the [hosts file](C:\Windows\System32\drivers\etc) changes.

@@ -4,6 +4,13 @@
 
 Standard out-of-the-box detections are great, but sometimes you need to create a custom detection rule to catch a specific threat. In the [previous quest](quest3.md), you alerted on static pre-configured IP ranges. Now, we will expand scope and think global access.
 
+## Learning Objectives 🎓
+
+- Understand how to create a custom detection rule in Microsoft Sentinel
+- Understand how to use KQL functions to enrich your detection rule
+
+## Expand your detection scope
+
 * Use built-in KQL functions like [`geo_info_from_ip_address`](https://learn.microsoft.com/kusto/query/geo-info-from-ip-address-function?view=azure-data-explorer&preserve-view=true) to create a detection that alerts on logins from countries other than the company's known office locations, which are only in the `United States` and `Australia`.
 
 * Take inspiration from [this blog post](https://community.sap.com/t5/technology-blogs-by-members/nice-patch-sap-revisiting-your-sap-btp-security-measures-after-ai-core/ba-p/13770662).

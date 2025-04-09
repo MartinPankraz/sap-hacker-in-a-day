@@ -6,6 +6,10 @@ Every day we log on and authenticate to websites -- obviously also to SAP system
 
 As you will see in this hands-on lab, even that might not be good enough!
 
+## Learning Objectives 🎓
+
+- Understand the hacking target the SAP Fiori Launchpad and ensure you can access it
+
 ## The Target: SAP Fiori Launchpad
 
 Before we install anything and get started, lets take a look at our target system. Open the SAP Fiori Launchpad provided to you. It looks something like this with a proper domain of course.

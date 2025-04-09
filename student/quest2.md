@@ -4,6 +4,11 @@
 
 This quest is about sneaking in the phishing lure and increasing the chance to make someone use it.
 
+## Learning Objectives 🎓
+
+- Understand how to create a phishing lure and use it in an email or app
+- Experience how easy it is to convince AI assistants to generate phishing content
+
 ## Weaponize an email
 
 * Use the devious lure created before to craft a convincing email.
